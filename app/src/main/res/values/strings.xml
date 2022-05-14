@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Bluetooth_Messaging_App</string>
+    <string name="title_activity_page5">page5</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="title_activity_page6">page6</string>
+    <string name="title_activity_page7">page7</string>
+    <string name="title_activity_page8">page8</string>
+    <string name="title_activity_page9">page9</string>
+</resources>
