@@ -18,30 +18,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Bluetooth_Messaging_App">
-        <activity android:name=".page18"></activity>
-        <activity android:name=".page17" />
-        <activity android:name=".page16" />
-        <activity android:name=".page15" />
-        <activity android:name=".page12" />
-        <activity android:name=".page11" />
-        <activity android:name=".page10" />
-        <activity android:name=".page9" />
-        <activity android:name=".page8" />
-        <activity android:name=".page7" />
-        <activity android:name=".page6" />
-        <activity android:name=".page5" />
-        <activity android:name=".page4" />
 
-        <uses-library
-            android:required="true"
-            android:name="" />
         <!--
                Set to true if your app is Standalone, that is, it does not require the handheld
                app to run.
         -->
-        <meta-data
-            android:name="com.google.android.wearable.standalone"
-            android:value="true" />
+
 
         <activity android:name=".page3" />
         <activity android:name=".page2" />
