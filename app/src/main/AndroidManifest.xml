@@ -25,10 +25,16 @@
         <activity android:name=".page12" />
         <activity android:name=".page11" />
         <activity android:name=".page10" />
+        <activity android:name=".page9" />
+        <activity android:name=".page8" />
+        <activity android:name=".page7" />
+        <activity android:name=".page6" />
+        <activity android:name=".page5" />
+        <activity android:name=".page4" />
 
         <uses-library
-            android:name="com.google.android.wearable"
-            android:required="true" />
+            android:required="true"
+            android:name="" />
         <!--
                Set to true if your app is Standalone, that is, it does not require the handheld
                app to run.
@@ -37,52 +43,6 @@
             android:name="com.google.android.wearable.standalone"
             android:value="true" />
 
-        <activity
-            android:name=".page9"
-            android:label="@string/title_activity_page9">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".page8"
-            android:label="@string/title_activity_page8">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".page7"
-            android:label="@string/title_activity_page7">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".page6"
-            android:label="@string/title_activity_page6">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".page5"
-            android:label="@string/title_activity_page5">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".page4" />
         <activity android:name=".page3" />
         <activity android:name=".page2" />
         <activity
