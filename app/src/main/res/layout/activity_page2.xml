@@ -6,4 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".page2">
 
+    <Button
+        android:id="@+id/bt_on"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ON"
+        app:layout_constraintBottom_toBottomOf="@+id/bt_off"
+        app:layout_constraintEnd_toStartOf="@+id/bt_off"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bt_off" />
+
+    <Button
+        android:id="@+id/bt_off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.707"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.054" />
 </androidx.constraintlayout.widget.ConstraintLayout>

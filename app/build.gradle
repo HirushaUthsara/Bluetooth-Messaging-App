@@ -38,3 +38,11 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     compileOnly 'com.google.android.wearable:wearable:2.6.0'
 }
+
+
+
+
+
+
+
+
