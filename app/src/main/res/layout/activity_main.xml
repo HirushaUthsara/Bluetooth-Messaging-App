@@ -69,7 +69,7 @@
         android:id="@+id/button2page5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="page 5"
+        android:text="group chat (admin)"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_for_page2_3" />
@@ -78,30 +78,20 @@
         android:id="@+id/button2page6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="page 6"
+        android:text="direct chat"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2page5" />
+        app:layout_constraintTop_toBottomOf="@+id/button2page10" />
 
     <Button
         android:id="@+id/button2page10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="page 10"
+        android:text="group chat (normal)"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2page6" />
+        app:layout_constraintTop_toBottomOf="@+id/button2page5" />
 
-    <Button
-        android:id="@+id/button2page11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="page 11"
-        app:layout_constraintBottom_toTopOf="@+id/button_for_page3_group_chat"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2page10" />
 </androidx.constraintlayout.widget.ConstraintLayout>

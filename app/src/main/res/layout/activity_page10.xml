@@ -11,14 +11,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <Button
+        <TextView
             android:id="@+id/contactname"
             android:layout_width="match_parent"
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:text="Group 1"
+            android:gravity="center"
             android:textSize="20dp"
-            android:drawableLeft="@drawable/groupchaticon"></Button>
+            android:drawableLeft="@drawable/groupchaticon"></TextView>
 
     </LinearLayout>
 
