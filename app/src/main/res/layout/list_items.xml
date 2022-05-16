@@ -8,9 +8,11 @@
     <TextView
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/label"
+        android:paddingHorizontal="20dp"
+        android:paddingLeft="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="10dip"
+        android:padding="10dp"
         android:textSize="16dip"
         android:textStyle="bold"
         android:gravity="center_vertical"
