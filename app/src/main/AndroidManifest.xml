@@ -26,6 +26,7 @@
                Set to true if your app is Standalone, that is, it does not require the handheld
                app to run.
         -->
+
         <activity android:name=".page3" />
         <activity android:name=".page2" />
         <activity
@@ -37,6 +38,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".page5" />
+        <activity android:name=".page6" />
+        <activity android:name=".page10" />
+        <activity android:name=".page11" />
     </application>
 
 </manifest>

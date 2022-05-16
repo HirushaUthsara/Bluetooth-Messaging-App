@@ -62,5 +62,45 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.315" />
+
+    <Button
+        android:id="@+id/button2page5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="page 5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_for_page2_3" />
+
+    <Button
+        android:id="@+id/button2page6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="page 6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2page5" />
+
+    <Button
+        android:id="@+id/button2page10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="page 10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2page6" />
+
+    <Button
+        android:id="@+id/button2page11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="page 11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2page10" />
 </androidx.constraintlayout.widget.ConstraintLayout>
