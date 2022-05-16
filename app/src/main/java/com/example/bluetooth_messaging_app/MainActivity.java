@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
-    Button button_for_page2_direct_chat,button2page5,button2page6,button2page10,button2page11;;
+    Button button_for_page2_direct_chat,button2page5,button2page10,groupchat,directchat1,directchat2,directchat3,directchat4;
     Button button_for_page3_group_chat, button_for_page2_3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,28 +19,49 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //hiiiiiii
 
-        button2page5 = findViewById(R.id.button2page5);
-        button2page5.setOnClickListener(new View.OnClickListener(){
+        groupchat = findViewById(R.id.groupchats);
+        groupchat.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Intent i1 = new Intent(getApplicationContext(),page5.class);
-                startActivity(i1);
+                Intent i2 = new Intent(getApplicationContext(),page3.class);
+                startActivity(i2);
             }
         });
-        button2page6 = findViewById(R.id.button2page6);
-        button2page6.setOnClickListener(new View.OnClickListener(){
+
+
+        directchat1 = findViewById(R.id.directchat1);
+        directchat1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 Intent i2 = new Intent(getApplicationContext(),page6.class);
                 startActivity(i2);
             }
         });
-        button2page10 = findViewById(R.id.button2page10);
-        button2page10.setOnClickListener(new View.OnClickListener(){
+
+        directchat2 = findViewById(R.id.directchat2);
+        directchat2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Intent i3 = new Intent(getApplicationContext(),page10.class);
-                startActivity(i3);
+                Intent i2 = new Intent(getApplicationContext(),page6.class);
+                startActivity(i2);
+            }
+        });
+
+        directchat3 = findViewById(R.id.directchat3);
+        directchat3.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent i2 = new Intent(getApplicationContext(),page6.class);
+                startActivity(i2);
+            }
+        });
+
+        directchat4 = findViewById(R.id.directchat4);
+        directchat4.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent i2 = new Intent(getApplicationContext(),page6.class);
+                startActivity(i2);
             }
         });
 

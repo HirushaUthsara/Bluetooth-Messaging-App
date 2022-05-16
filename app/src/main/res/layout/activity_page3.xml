@@ -1,9 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".page3">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/directchats"
+            android:layout_width="match_parent"
+            android:layout_weight="3"
+            android:textSize="15sp"
+            android:layout_height="match_parent"
+            android:text="Directs">
+        </Button>
+        <TextView
+            android:id="@+id/groupchats"
+            android:layout_width="match_parent"
+            android:layout_weight="2"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:text="GROUPS">
+        </TextView>
+
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/groupchat1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="20sp"
+        android:text="Group Chat 1">
+    </Button>
+
+    <Button
+        android:id="@+id/groupchat2_ADM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="20sp"
+        android:text="group Chat 2 (AS ADMIN)">
+    </Button>
+
+    <Button
+        android:id="@+id/groupchat3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="20sp"
+        android:text="group Chat 3">
+    </Button>
+
+    <Button
+        android:id="@+id/groupchat4_ADM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="20sp"
+        android:text="group Chat 4 (AS ADMIN)">
+    </Button>
+
+
+</LinearLayout>

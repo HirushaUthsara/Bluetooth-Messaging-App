@@ -1,36 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CHAT APP"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.47" />
+        android:orientation="horizontal">
 
-    <TextView
-        android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/directchats"
+            android:layout_width="match_parent"
+            android:layout_weight="2"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:text="Direct Chats">
+        </TextView>
+        <Button
+            android:id="@+id/groupchats"
+            android:layout_width="match_parent"
+            android:layout_weight="3"
+            android:textSize="15sp"
+            android:layout_height="match_parent"
+            android:text="Groups">
+        </Button>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/directchat1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="page_1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
+        android:gravity="center_vertical"
+        android:paddingLeft="20sp"
+        android:text="Direct Chat 1">
+    </Button>
+
+    <Button
+        android:id="@+id/directchat2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="20sp"
+        android:text="Direct Chat 2">
+    </Button>
+
+    <Button
+        android:id="@+id/directchat3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="20sp"
+        android:text="Direct Chat 3">
+    </Button>
+
+    <Button
+        android:id="@+id/directchat4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="20sp"
+        android:text="Direct Chat 4">
+    </Button>
+
+
+
+
+
+
+
+
 
     <Button
         android:id="@+id/button_for_page2_direct_chat"
@@ -65,33 +112,5 @@
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.315" />
 
-    <Button
-        android:id="@+id/button2page5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="group chat (admin)"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_for_page2_3" />
 
-    <Button
-        android:id="@+id/button2page6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="direct chat"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2page10" />
-
-    <Button
-        android:id="@+id/button2page10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="group chat (normal)"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2page5" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
