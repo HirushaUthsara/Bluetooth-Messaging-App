@@ -19,7 +19,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Bluetooth_Messaging_App">
-        <activity android:name=".list_paired_devices"></activity>
+        <activity android:name=".allcomponents"></activity>
+        <activity android:name=".list_paired_devices" />
         <activity android:name=".page2_3" />
         <!--
                Set to true if your app is Standalone, that is, it does not require the handheld
