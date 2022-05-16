@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
-    Button button_for_page2_direct_chat,button2page5,button2page10,groupchat,directchat1,directchat2,directchat3,directchat4;
+    Button button_for_page2_direct_chat,groupchat,directchat1,directchat2,directchat3,directchat4;
     Button button_for_page3_group_chat, button_for_page2_3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

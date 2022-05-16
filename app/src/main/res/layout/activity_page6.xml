@@ -5,27 +5,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/back"
     tools:context=".page4">
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
+        android:layout_height="wrap_content"
+        android:background="#FDF9F7">
+        <ImageView
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:background="@drawable/face"
+            android:layout_gravity="center"
+            android:layout_margin="5sp"
+            ></ImageView>
         <Button
             android:id="@+id/contactname"
             android:layout_width="match_parent"
             android:layout_weight="1"
             android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_gravity="center"
             android:text="Contact 1"
-            android:textSize="20dp"
-            android:drawableLeft="@drawable/normalchaticon"></Button>
+            android:textSize="20sp">
+            </Button>
 
         <Button
             android:id="@+id/invitebutton"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="INVITE"
+            android:layout_marginLeft="5sp"
+            android:layout_marginRight="5sp"
             android:textSize="15sp"></Button>
 
     </LinearLayout>
@@ -34,7 +46,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="5sp"
+        android:layout_marginTop="10sp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -44,7 +58,7 @@
             android:paddingLeft="5sp"
             android:paddingRight="15sp"
             android:layout_marginBottom="10sp"
-            android:background="#BFAAE5"
+            android:background="#FDF9F7"
             android:textSize="20sp"
             android:text="Hi">
         </TextView>
@@ -56,7 +70,7 @@
             android:paddingLeft="5sp"
             android:paddingRight="15sp"
             android:layout_marginBottom="10sp"
-            android:background="#BFAAE5"
+            android:background="#FDF9F7"
             android:textSize="20sp"
             android:text="Hi">
         </TextView>
@@ -68,7 +82,7 @@
             android:paddingLeft="5sp"
             android:paddingRight="15sp"
             android:layout_marginBottom="10sp"
-            android:background="#BFAAE5"
+            android:background="#FDF9F7"
             android:textSize="20sp"
             android:text="Hi">
         </TextView>
@@ -80,7 +94,7 @@
             android:paddingLeft="5sp"
             android:paddingRight="15sp"
             android:layout_marginBottom="10sp"
-            android:background="#BFAAE5"
+            android:background="#FDF9F7"
             android:textSize="20sp"
             android:text="Hi">
         </TextView>
@@ -92,7 +106,7 @@
             android:paddingLeft="5sp"
             android:paddingRight="15sp"
             android:layout_marginBottom="10sp"
-            android:background="#BFAAE5"
+            android:background="#FDF9F7"
             android:textSize="20sp"
             android:text="Hi">
         </TextView>
@@ -104,7 +118,7 @@
             android:paddingLeft="5sp"
             android:paddingRight="15sp"
             android:layout_marginBottom="10sp"
-            android:background="#BFAAE5"
+            android:background="#FDF9F7"
             android:textSize="20sp"
             android:text="Hi">
         </TextView>
@@ -114,20 +128,25 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="5sp">
         <EditText
             android:id="@+id/typingtext"
             android:layout_width="match_parent"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:text="New Message"
+            android:hint=" New Message"
+            android:backgroundTint="#FDF9F7"
+            android:layout_marginEnd="5sp"
+            android:background="@drawable/roundbuton"
             android:textSize="25dp">
         </EditText>
 
         <Button
             android:id="@+id/sendbutton"
-            android:layout_width="60sp"
+            android:layout_width="50sp"
             android:layout_height="match_parent"
+            android:background="@drawable/roundbuton"
             app:icon="@drawable/ic_baseline_send_24"></Button>
     </LinearLayout>
 
