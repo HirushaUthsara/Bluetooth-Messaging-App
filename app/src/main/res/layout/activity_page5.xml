@@ -1,9 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".page4">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <Button
+            android:id="@+id/contactphoto"
+            android:layout_width="60dp"
+            android:layout_height="match_parent">
+        </Button>
+        <Button
+            android:id="@+id/contactname"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Group 1"
+            android:textSize="20dp">
+        </Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="600dp">
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+        <TextView
+            android:id="@+id/typingtext"
+            android:layout_width="350dp"
+            android:layout_height="match_parent"
+            android:text="New Message"
+            android:textSize="25dp">
+        </TextView>
+        <Button
+            android:id="@+id/sendbutton"
+            android:layout_width="60dp"
+            android:layout_height="match_parent">
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>
