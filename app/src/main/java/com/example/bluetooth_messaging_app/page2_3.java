@@ -71,7 +71,7 @@ public class page2_3 extends AppCompatActivity {
                 BluetoothDevice bluetoothDevice = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
 
 // Add the name and address to array adapter
-               adapter.add(bluetoothDevice.getName() + "\n" + bluetoothDevice.getAddress());
+               adapter.add("         "+ bluetoothDevice.getName() + "\n      " + bluetoothDevice.getAddress());
                 //adapter.add(bluetoothDevice.getName());
                         System.out.println("------------------------------------------"+bluetoothDevice.getName());
 
@@ -80,7 +80,7 @@ public class page2_3 extends AppCompatActivity {
                 listView.setVisibility(View.VISIBLE);
                 progressBar.setVisibility(View.GONE);
 
-                adapter.add("No Device Found");
+                adapter.add("    No Device Found");
 
             }
 
