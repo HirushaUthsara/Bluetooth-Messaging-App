@@ -6,12 +6,25 @@ import android.bluetooth.BluetoothSocket;
 import java.io.IOException;
 import java.util.UUID;
 
-private class ClientClass extends Thread
+import android.os.Handler;
+import android.os.Message;
+
+class ClientClass extends Thread
 {
-    private static final UUID MY_UUID = ;
-    private static final Object STATE_CONNECTED = ;
-    private BluetoothDevice device;
+    private static BluetoothDevice device;
+    private static final UUID MY_UUID=UUID.fromString(device.getAddress());// if get any error use UUID
+    static final int STATE_LISTENING = 1;
+    static final int STATE_CONNECTING=2;
+    static final int STATE_CONNECTED=3;
+    static final int STATE_CONNECTION_FAILED=4;
+    static final int STATE_MESSAGE_RECEIVED=5;
     private BluetoothSocket socket;
+
+    private SendReceive sendReceive;
+
+    private String status , tempMsg;
+
+
 
     public ClientClass (BluetoothDevice device1)
     {
@@ -42,4 +55,31 @@ private class ClientClass extends Thread
             handler.sendMessage(message);
         }
     }
+    Handler handler=new Handler(new Handler.Callback() {
+        @Override
+        public boolean handleMessage(Message msg) {
+
+            switch (msg.what)
+            {
+                case STATE_LISTENING:
+                    status="Listening";
+                    break;
+                case STATE_CONNECTING:
+                    status= "Connecting";
+                    break;
+                case STATE_CONNECTED:
+                    status= "Connected";
+                    break;
+                case STATE_CONNECTION_FAILED:
+                    status= "Connection Failed";
+                    break;
+                case STATE_MESSAGE_RECEIVED:
+                    byte[] readBuff= (byte[]) msg.obj;
+                    tempMsg=new String(readBuff,0,msg.arg1);
+                    //msg_box.setText(tempMsg);
+                    break;
+            }
+            return true;
+        }
+    });
 }
