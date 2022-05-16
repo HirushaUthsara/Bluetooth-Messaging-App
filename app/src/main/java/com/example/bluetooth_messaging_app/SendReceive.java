@@ -1,58 +1,69 @@
 package com.example.bluetooth_messaging_app;
 
-import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
-
-import java.io.IOException;
-import java.util.UUID;
-
 import android.os.Handler;
 import android.os.Message;
 
-class ClientClass extends Thread
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+
+import java.util.Set;
+import java.util.UUID;//<---------------------------------------------------
+ class SendReceive extends Thread
 {
-    private static BluetoothDevice device;
-    private static final UUID MY_UUID=UUID.fromString(device.getAddress());// if get any error use UUID
+    private final BluetoothSocket bluetoothSocket;
+    private final InputStream inputStream;
+    private final OutputStream outputStream;
+
     static final int STATE_LISTENING = 1;
     static final int STATE_CONNECTING=2;
     static final int STATE_CONNECTED=3;
     static final int STATE_CONNECTION_FAILED=4;
     static final int STATE_MESSAGE_RECEIVED=5;
-    private BluetoothSocket socket;
 
-    private SendReceive sendReceive;
+    String status , tempMsg;
 
-    private String status , tempMsg;
-
-
-
-    public ClientClass (BluetoothDevice device1)
+    public SendReceive (BluetoothSocket socket)
     {
-        device=device1;
+        bluetoothSocket=socket;
+        InputStream tempIn=null;
+        OutputStream tempOut=null;
 
         try {
-            socket=device.createRfcommSocketToServiceRecord(MY_UUID);
+            tempIn=bluetoothSocket.getInputStream();
+            tempOut=bluetoothSocket.getOutputStream();
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        inputStream=tempIn;
+        outputStream=tempOut;
     }
 
     public void run()
     {
+        byte[] buffer=new byte[1024];
+        int bytes;
+
+        while (true)
+        {
+            try {
+                bytes=inputStream.read(buffer);
+                handler.obtainMessage(STATE_MESSAGE_RECEIVED,bytes,-1,buffer).sendToTarget();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void write(byte[] bytes)
+    {
         try {
-            socket.connect();
-            Message message=Message.obtain();
-            message.what=STATE_CONNECTED;
-            handler.sendMessage(message);
-
-            sendReceive=new SendReceive(socket);
-            sendReceive.start();
-
+            outputStream.write(bytes);
         } catch (IOException e) {
             e.printStackTrace();
-            Message message=Message.obtain();
-            message.what=STATE_CONNECTION_FAILED;
-            handler.sendMessage(message);
         }
     }
     Handler handler=new Handler(new Handler.Callback() {
@@ -75,7 +86,7 @@ class ClientClass extends Thread
                     break;
                 case STATE_MESSAGE_RECEIVED:
                     byte[] readBuff= (byte[]) msg.obj;
-                    tempMsg=new String(readBuff,0,msg.arg1);
+                     tempMsg=new String(readBuff,0,msg.arg1);
                     //msg_box.setText(tempMsg);
                     break;
             }
