@@ -7,51 +7,52 @@
     android:orientation="vertical"
     tools:context=".page4">
 
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp">
-        <Button
-            android:id="@+id/contactphoto"
-            android:layout_width="60dp"
-            android:layout_height="match_parent">
-        </Button>
+        android:layout_height="wrap_content">
+
         <Button
             android:id="@+id/contactname"
-            android:layout_width="260dp"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
             android:layout_height="match_parent"
             android:text="Contact 1"
-            android:textSize="20dp">
-        </Button>
+            android:textSize="20dp"
+            android:drawableLeft="@drawable/normalchaticon"></Button>
+
         <Button
             android:id="@+id/invitebutton"
-            android:layout_width="100dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="INVITE"
-            android:textSize="15dp">
-        </Button>
+            android:textSize="15sp"></Button>
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="600dp">
+        android:layout_height="match_parent"
+        android:layout_weight="1">
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp">
-        <TextView
+        android:layout_height="wrap_content">
+        <EditText
             android:id="@+id/typingtext"
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
             android:layout_height="match_parent"
             android:text="New Message"
             android:textSize="25dp">
-        </TextView>
+        </EditText>
+
         <Button
             android:id="@+id/sendbutton"
-            android:layout_width="60dp"
-            android:layout_height="match_parent">
-        </Button>
+            android:layout_width="60sp"
+            android:layout_height="match_parent"
+            app:icon="@drawable/ic_baseline_send_24"></Button>
     </LinearLayout>
 
 
