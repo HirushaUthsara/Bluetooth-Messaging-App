@@ -18,10 +18,17 @@
         </Button>
         <Button
             android:id="@+id/contactname"
-            android:layout_width="match_parent"
+            android:layout_width="260dp"
             android:layout_height="match_parent"
             android:text="Group 1"
             android:textSize="20dp">
+        </Button>
+        <Button
+            android:id="@+id/onlineusersbutton"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="ONLINE USERS"
+            android:textSize="15dp">
         </Button>
 
     </LinearLayout>
@@ -47,5 +54,7 @@
             android:layout_height="match_parent">
         </Button>
     </LinearLayout>
+
+
 
 </LinearLayout>
