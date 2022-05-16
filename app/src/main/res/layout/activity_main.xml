@@ -20,6 +20,7 @@
         app:layout_constraintVertical_bias="0.47" />
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="page_1"
@@ -104,4 +105,14 @@
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2page10" />
+
+    <Button
+        android:id="@+id/all_comp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="go to all components"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
