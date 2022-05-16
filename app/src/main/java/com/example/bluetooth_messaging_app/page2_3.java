@@ -43,7 +43,9 @@ public class page2_3 extends AppCompatActivity {
     private ListView listView;
     private BluetoothAdapter bluetoothAdapter;
     private ProgressBar progressBar;
-//    @Override
+    Button button_for_list_paired_devices;
+
+    //    @Override
 //    protected void onCreate(Bundle savedInstanceState) {
 //        super.onCreate(savedInstanceState);
 //        setContentView(R.layout.activity_page2_3);
@@ -131,6 +133,15 @@ public class page2_3 extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar2);
 
         Button button = findViewById(R.id.button);
+        // link to page 3 group chat
+        button_for_list_paired_devices = findViewById(R.id.list_paired_devices);
+        button_for_list_paired_devices.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),list_paired_devices.class);
+                startActivity(i);
+            }
+        });
 
 
         bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
