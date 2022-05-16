@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     Button button_for_page2_direct_chat;
-    Button button_for_page3_group_chat;
+    Button button_for_page3_group_chat, button_for_page2_3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +38,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        // link to page 3 group chat
+        button_for_page2_3 = findViewById(R.id.button_for_page2_3);
+        button_for_page2_3.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),page2_3.class);
+                startActivity(i);
+            }
+        });
+
     }
     // link for page 13 setting
     @Override

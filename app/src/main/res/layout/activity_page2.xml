@@ -33,33 +33,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="turn on blutooth discoverbility"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="find near by devices"
         app:layout_constraintEnd_toEndOf="@+id/bt_off"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="@+id/bt_on"
-        app:layout_constraintTop_toBottomOf="@+id/bt_off"
-        app:layout_constraintVertical_bias="0.006" />
+        app:layout_constraintTop_toBottomOf="@+id/bt_off" />
 
-    <androidx.core.widget.ContentLoadingProgressBar
+    <ProgressBar
         android:id="@+id/progressbar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_discoverbility" />
-
+        app:layout_constraintTop_toBottomOf="@id/button_discoverbility"/>
     <ListView
         android:id="@+id/listview"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_width="394dp"
+        android:layout_height="505dp"
+        android:dividerHeight="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_discoverbility"
-        android:dividerHeight="10dp"
 
         />
 
