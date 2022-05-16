@@ -210,10 +210,7 @@ public class page2 extends AppCompatActivity {
 // Bluetooth already disabled
                     Toast.makeText(getApplicationContext(), "Bluetooth already disabled", Toast.LENGTH_SHORT).show();
 
-
                 }
-
-
             }
         });
 
