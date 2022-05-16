@@ -39,6 +39,7 @@
         </TextView>
 
         <Button
+            android:id="@+id/requestbutton1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="REQUEST">
@@ -59,6 +60,7 @@
         </TextView>
 
         <Button
+            android:id="@+id/requestbutton2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="REQUEST">
@@ -79,6 +81,7 @@
         </TextView>
 
         <Button
+            android:id="@+id/requestbutton3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="REQUEST">
@@ -98,12 +101,13 @@
         android:text="Group 1">
     </TextView>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="REQUEST">
+        <Button
+            android:id="@+id/requestbutton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="REQUEST">
 
-    </Button>
+        </Button>
     </LinearLayout>
 
 
