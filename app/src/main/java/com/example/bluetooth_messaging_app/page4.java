@@ -1,14 +1,17 @@
 package com.example.bluetooth_messaging_app;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -22,6 +25,7 @@ public class page4 extends AppCompatActivity {
     private CircleImageView ProfileImage;
     private static final int PICK_IMAGE = 1;
     private Button btn;
+    private static String LOG_TAG = "UIElementsPracticeLog";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,8 +53,20 @@ public class page4 extends AppCompatActivity {
         if (requestCode == 1){
             Uri uri = data.getData();
             ProfileImage.setImageURI(uri);
-            btn.setText("Profile Picture Changed");
+//
         }
 
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.i(LOG_TAG,"In Saved Instance State");
+        ProfileImage = findViewById(R.id.profile_pic);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
     }
 }
