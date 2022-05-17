@@ -24,7 +24,7 @@ import java.util.UUID;
 
     private static final String APP_NAME = "ChitChat";
     private static BluetoothDevice device;
-    private static final UUID MY_UUID=UUID.fromString(device.getAddress());// if get any error use UUID
+    private static final UUID MY_UUID=UUID.fromString("467f91ca-d597-11ec-9d64-0242ac120002");
 
     BluetoothAdapter bluetoothAdapter=null;
 
@@ -76,26 +76,26 @@ import java.util.UUID;
         @Override
         public boolean handleMessage(Message msg) {
 
-            switch (msg.what)
-            {
-                case STATE_LISTENING:
-                    status="Listening";
-                    break;
-                case STATE_CONNECTING:
-                    status= "Connecting";
-                    break;
-                case STATE_CONNECTED:
-                    status= "Connected";
-                    break;
-                case STATE_CONNECTION_FAILED:
-                    status= "Connection Failed";
-                    break;
-                case STATE_MESSAGE_RECEIVED:
-                    byte[] readBuff= (byte[]) msg.obj;
-                    tempMsg=new String(readBuff,0,msg.arg1);
-                    //msg_box.setText(tempMsg);
-                    break;
-            }
+//            switch (msg.what)
+//            {
+//                case STATE_LISTENING:
+//                    status="Listening";
+//                    break;
+//                case STATE_CONNECTING:
+//                    status= "Connecting";
+//                    break;
+//                case STATE_CONNECTED:
+//                    status= "Connected";
+//                    break;
+//                case STATE_CONNECTION_FAILED:
+//                    status= "Connection Failed";
+//                    break;
+//                case STATE_MESSAGE_RECEIVED:
+//                    byte[] readBuff= (byte[]) msg.obj;
+//                    tempMsg=new String(readBuff,0,msg.arg1);
+//                    //msg_box.setText(tempMsg);
+//                    break;
+//            }
             return true;
         }
     });

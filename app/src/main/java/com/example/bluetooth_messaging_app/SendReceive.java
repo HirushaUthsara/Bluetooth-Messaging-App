@@ -13,7 +13,6 @@ import java.util.Set;
 import java.util.UUID;//<---------------------------------------------------
  class SendReceive extends Thread
 {
-    private final BluetoothSocket bluetoothSocket;
     private final InputStream inputStream;
     private final OutputStream outputStream;
 
@@ -27,13 +26,12 @@ import java.util.UUID;//<---------------------------------------------------
 
     public SendReceive (BluetoothSocket socket)
     {
-        bluetoothSocket=socket;
         InputStream tempIn=null;
         OutputStream tempOut=null;
 
         try {
-            tempIn=bluetoothSocket.getInputStream();
-            tempOut=bluetoothSocket.getOutputStream();
+            tempIn= socket.getInputStream();
+            tempOut= socket.getOutputStream();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -70,26 +68,26 @@ import java.util.UUID;//<---------------------------------------------------
         @Override
         public boolean handleMessage(Message msg) {
 
-            switch (msg.what)
-            {
-                case STATE_LISTENING:
-                    status="Listening";
-                    break;
-                case STATE_CONNECTING:
-                    status= "Connecting";
-                    break;
-                case STATE_CONNECTED:
-                    status= "Connected";
-                    break;
-                case STATE_CONNECTION_FAILED:
-                    status= "Connection Failed";
-                    break;
-                case STATE_MESSAGE_RECEIVED:
-                    byte[] readBuff= (byte[]) msg.obj;
-                     tempMsg=new String(readBuff,0,msg.arg1);
-                    //msg_box.setText(tempMsg);
-                    break;
-            }
+//            switch (msg.what)
+//            {
+//                case STATE_LISTENING:
+//                    status="Listening";
+//                    break;
+//                case STATE_CONNECTING:
+//                    status= "Connecting";
+//                    break;
+//                case STATE_CONNECTED:
+//                    status= "Connected";
+//                    break;
+//                case STATE_CONNECTION_FAILED:
+//                    status= "Connection Failed";
+//                    break;
+//                case STATE_MESSAGE_RECEIVED:
+//                    byte[] readBuff= (byte[]) msg.obj;
+//                     tempMsg=new String(readBuff,0,msg.arg1);
+//                    //msg_box.setText(tempMsg);
+//                    break;
+//            }
             return true;
         }
     });

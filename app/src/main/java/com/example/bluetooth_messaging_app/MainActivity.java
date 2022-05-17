@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     Button button_for_page2_direct_chat,groupchat,directchat1,directchat2,directchat3,directchat4;
-    Button button_for_page3_group_chat, button_for_page2_3;
+    Button button_for_page3_group_chat, button_for_page2_3, button_for_all_comp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -90,6 +90,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(),page2_3.class);
+                startActivity(i);
+            }
+        });
+        button_for_all_comp= findViewById(R.id.allcomp);
+        button_for_all_comp.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),allcomponents.class);
                 startActivity(i);
             }
         });

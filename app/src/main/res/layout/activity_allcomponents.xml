@@ -1,20 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<!--<androidx.constraintlayout.widget.ConstraintLayout-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:ignore="ExtraText">-->
+
+<!--    <Button-->
+<!--        android:id="@+id/listen"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginStart="14dp"-->
+<!--        android:layout_marginTop="19dp"-->
+<!--        android:text="listen"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.006"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.009"-->
+<!--        tools:ignore="HardcodedText" />-->
+
+<!--    <ListView-->
+<!--        android:id="@+id/listview"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="200dp"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:background="@android:color/darker_gray"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="1.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.444" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/msg"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/listview"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:hint="Message"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColor="?android:attr/textColorLink"-->
+<!--        android:textSize="30sp"-->
+<!--        android:textStyle="italic"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/listview"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/writemsg"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignStart="@+id/listen"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:ems="10"-->
+<!--        android:inputType="textPersonName"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.218"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.913" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/send"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignTop="@+id/writemsg"-->
+<!--        android:layout_alignEnd="@+id/status"-->
+<!--        android:text="Send"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.67"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/writemsg"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/writemsg"-->
+<!--        app:layout_constraintVertical_bias="0.0" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/listDevices"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_above="@+id/listview"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:text="List Devices"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/listview"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/msg" />-->
+
+<!--    <TextView- -->
+<!--        android:id="@+id/status"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignBaseline="@+id/listDevices"-->
+<!--        android:layout_alignBottom="@+id/listDevices"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:text="Status"-->
+<!--        android:textSize="14sp"-->
+<!--        android:textStyle="italic"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/msg"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--    />-->
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<!--    tools:context="com.sarthitechnology.btchat.allcomponets">-->
-
     <Button
         android:id="@+id/listen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_marginStart="14dp"
         android:layout_marginTop="19dp"
-        android:text="Listen"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:text="Listen" />
 
     <ListView
         android:id="@+id/listview"
@@ -24,6 +138,13 @@
         android:layout_below="@+id/listen"
         android:layout_alignParentStart="true"
         android:layout_marginTop="31dp" />
+    <Button
+            android:id="@+id/listDevices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/listview"
+            android:layout_centerHorizontal="true"
+            android:text="List Devices" />
 
     <TextView
         android:id="@+id/msg"
@@ -48,22 +169,6 @@
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/listen" />
 
-    <Button
-        android:id="@+id/send"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Send"
-        android:layout_alignTop="@+id/writemsg"
-        android:layout_alignEnd="@+id/status" />
-
-    <Button
-        android:id="@+id/listDevices"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/listview"
-        android:layout_centerHorizontal="true"
-        android:text="List Devices" />
-
     <TextView
         android:id="@+id/status"
         android:layout_width="wrap_content"
@@ -75,5 +180,99 @@
         android:text="Status"
         android:textSize="14sp"
         android:textStyle="italic" />
+    <Button
+        android:id="@+id/send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:layout_alignTop="@+id/writemsg"
+        android:layout_alignEnd="@+id/status" />
+
+
+
+
+
+
+
 
 </RelativeLayout>
+
+<!--<RelativeLayout-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
+<!--    tools:context=".allcomponents"-->
+
+
+<!--    <Button-->
+<!--        android:id="@+id/listen"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="14dp"-->
+<!--        android:layout_marginTop="19dp"-->
+<!--        android:text="Listen"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_alignParentStart="true" />-->
+
+<!--    <ListView-->
+<!--        android:id="@+id/listview"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="200dp"-->
+<!--        android:background="@android:color/darker_gray"-->
+<!--        android:layout_below="@+id/listen"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_marginTop="31dp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/msg"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/listview"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="48dp"-->
+<!--        android:hint="Message"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColor="?android:attr/textColorLink"-->
+<!--        android:textSize="30sp"-->
+<!--        android:textStyle="italic" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/writemsg"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="14dp"-->
+<!--        android:ems="10"-->
+<!--        android:inputType="textPersonName"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_alignStart="@+id/listen" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/send"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Send"-->
+<!--        android:layout_alignTop="@+id/writemsg"-->
+<!--        android:layout_alignEnd="@+id/status" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/listDevices"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_above="@+id/listview"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:text="List Devices" />-->
+
+<!--    <TextView- -->
+<!--        android:id="@+id/status"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignBaseline="@+id/listDevices"-->
+<!--        android:layout_alignBottom="@+id/listDevices"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_marginEnd="14dp"-->
+<!--        android:text="Status"-->
+<!--        android:textSize="14sp"-->
+<!--        android:textStyle="italic" />-->
+
+<!--</RelativeLayout>-->
