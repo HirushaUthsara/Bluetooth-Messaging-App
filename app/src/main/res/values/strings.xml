@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Bluetooth_Messaging_App</string>
     <string name="title_activity_page5">page5</string>
+    <string name="select">Select Item</string>
     <!--
     This string is used for square devices and overridden by hello_world in
     values-round/strings.xml for round devices.

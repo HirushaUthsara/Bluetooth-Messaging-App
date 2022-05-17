@@ -46,6 +46,7 @@
         <activity android:name=".page9" />
         <activity android:name=".page10" />
         <activity android:name=".page11" />
+        <activity android:name=".page12" />
     </application>
 
 </manifest>
