@@ -27,7 +27,7 @@ import java.util.UUID;
 
 public class allcomponents extends AppCompatActivity {
 
-    Button listen,send, listDevices;
+    Button listen,send, listDevices,goto_send_msg;
     ListView listView;
     TextView msg_box,status;
     EditText writeMsg;
@@ -56,7 +56,7 @@ public class allcomponents extends AppCompatActivity {
         listen = (Button) findViewById(R.id.listen);
         send = (Button) findViewById(R.id.send);
         listView = (ListView) findViewById(R.id.listview);
-        msg_box = (TextView) findViewById(R.id.msg);
+        //msg_box = (TextView) findViewById(R.id.msg);
         status = (TextView) findViewById(R.id.status);
         writeMsg = (EditText) findViewById(R.id.writemsg);
         listDevices = (Button) findViewById(R.id.listDevices);
@@ -69,13 +69,7 @@ public class allcomponents extends AppCompatActivity {
             startActivityForResult(enableIntent,REQUEST_ENABLE_BLUETOOTH);
         }
 
-        implementListeners();
-    }
 
-
-
-    //--------------------------------------------------------------------------
-    private void implementListeners() {
 
         listDevices.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -124,7 +118,17 @@ public class allcomponents extends AppCompatActivity {
                 sendReceive.write(string.getBytes());
             }
         });
+        goto_send_msg= findViewById(R.id.goto_send_msg);
+        goto_send_msg.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),send_and_rec_msg.class);
+                startActivity(i);
+            }
+        });
     }
+
+
     //--------------------------------------------------------------------------
     Handler handler=new Handler(new Handler.Callback() {
         @Override
@@ -140,6 +144,14 @@ public class allcomponents extends AppCompatActivity {
                     break;
                 case STATE_CONNECTED:
                     status.setText("Connected");
+                    // goto another view to send msg
+                    goto_send_msg.setOnClickListener(new View.OnClickListener(){
+                        @Override
+                        public void onClick(View view) {
+                            Intent i = new Intent(getApplicationContext(),send_and_rec_msg.class);
+                            startActivity(i);
+                        }
+                    });
                     break;
                 case STATE_CONNECTION_FAILED:
                     status.setText("Connection Failed");
@@ -153,17 +165,7 @@ public class allcomponents extends AppCompatActivity {
             return true;
         }
     });
-    //----------------------------------------------------------------------
-    private void findViewByIdes() {
-        listen=(Button) findViewById(R.id.listen);
-        send=(Button) findViewById(R.id.send);
-        listView=(ListView) findViewById(R.id.listview);
-        msg_box =(TextView) findViewById(R.id.msg);
-        status=(TextView) findViewById(R.id.status);
-        writeMsg=(EditText) findViewById(R.id.writemsg);
-        listDevices=(Button) findViewById(R.id.listDevices);
-    }
-    //----------------------------------------------------------------------
+
     private class ServerClass extends Thread
     {
         private BluetoothServerSocket serverSocket;
@@ -209,6 +211,8 @@ public class allcomponents extends AppCompatActivity {
             }
         }
     }
+
+
     //-----------------------------------------------------------------
     private class ClientClass extends Thread
     {

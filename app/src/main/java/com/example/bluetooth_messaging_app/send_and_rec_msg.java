@@ -11,4 +11,5 @@ public class send_and_rec_msg extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send_and_rec_msg);
     }
+
 }
