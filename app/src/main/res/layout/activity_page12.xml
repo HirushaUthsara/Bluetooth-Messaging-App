@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:background="@color/cream"
         android:layout_marginBottom="20dp">
-
+<!--        lkn-->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
