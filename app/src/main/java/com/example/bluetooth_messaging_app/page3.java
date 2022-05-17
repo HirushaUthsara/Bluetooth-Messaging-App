@@ -66,11 +66,4 @@ public class page3 extends AppCompatActivity {
 
 
     }
-    // link for page 14 setting
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.activity_page14, menu);
-        return true;
-    }
 }

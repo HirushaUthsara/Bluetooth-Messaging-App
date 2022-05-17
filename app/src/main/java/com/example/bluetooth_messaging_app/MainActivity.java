@@ -1,113 +1,65 @@
 package com.example.bluetooth_messaging_app;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.renderscript.ScriptGroup;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.example.bluetooth_messaging_app.Adapters.FragmentsAdapter;
+import com.example.bluetooth_messaging_app.Models.Users;
+import com.example.bluetooth_messaging_app.databinding.ActivityMainBinding;
+
 public class MainActivity extends AppCompatActivity {
-    Button button_for_page2_direct_chat,groupchat,directchat1,directchat2,directchat3,directchat4;
-    Button button_for_page3_group_chat, button_for_page2_3, button_for_all_comp;
+    ActivityMainBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        //hiiiiiii
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        groupchat = findViewById(R.id.groupchats);
-        groupchat.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                Intent i2 = new Intent(getApplicationContext(),page3.class);
-                startActivity(i2);
-            }
-        });
-
-
-        directchat1 = findViewById(R.id.directchat1);
-        directchat1.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                Intent i2 = new Intent(getApplicationContext(),page6.class);
-                startActivity(i2);
-            }
-        });
-
-        directchat2 = findViewById(R.id.directchat2);
-        directchat2.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                Intent i2 = new Intent(getApplicationContext(),page6.class);
-                startActivity(i2);
-            }
-        });
-
-        directchat3 = findViewById(R.id.directchat3);
-        directchat3.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                Intent i2 = new Intent(getApplicationContext(),page6.class);
-                startActivity(i2);
-            }
-        });
-
-        directchat4 = findViewById(R.id.directchat4);
-        directchat4.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                Intent i2 = new Intent(getApplicationContext(),page6.class);
-                startActivity(i2);
-            }
-        });
-
-        // link to page 2 direct chat
-        button_for_page2_direct_chat = findViewById(R.id.button_for_page2_direct_chat);
-        button_for_page2_direct_chat.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(),page2.class);
-                startActivity(i);
-            }
-        });
-
-        // link to page 3 group chat
-        button_for_page3_group_chat = findViewById(R.id.button_for_page3_group_chat);
-        button_for_page3_group_chat.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(),page3.class);
-                startActivity(i);
-            }
-        });
-        // link to page 3 group chat
-        button_for_page2_3 = findViewById(R.id.button_for_page2_3);
-        button_for_page2_3.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(),page2_3.class);
-                startActivity(i);
-            }
-        });
-        button_for_all_comp= findViewById(R.id.allcomp);
-        button_for_all_comp.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(),allcomponents.class);
-                startActivity(i);
-            }
-        });
+        binding.viewPager.setAdapter(new FragmentsAdapter(getSupportFragmentManager()));
+        binding.tablayout.setupWithViewPager(binding.viewPager);
 
     }
     // link for page 13 setting
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.activity_page13, menu);
+        inflater.inflate(R.menu.activity_page14, menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch(item.getItemId()){
+            case R.id.profile:
+                Intent i = new Intent(getApplicationContext(),page4.class);
+                startActivity(i);
+                break;
+            case R.id.search:
+                Intent i1 = new Intent(getApplicationContext(),list_paired_devices.class);
+                startActivity(i1);
+                break;
+            case R.id.create_groupchat:
+                Intent i3 = new Intent(getApplicationContext(),page12.class);
+                startActivity(i3);
+                break;
+            case R.id.bluetooth:
+                Intent i4 = new Intent(getApplicationContext(),allcomponents.class);//page2
+                startActivity(i4);
+        }
+
+        return super.onOptionsItemSelected(item);
+
+
     }
 }

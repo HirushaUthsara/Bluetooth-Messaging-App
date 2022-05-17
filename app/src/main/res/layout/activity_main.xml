@@ -7,118 +7,21 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/allcomp"
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="all components" />
+        android:layout_height="56dp"
+        android:background="#FDF9F7"
+        android:elevation="12dp"
+        app:tabIndicatorColor="#A77954"
+        app:tabSelectedTextColor="#BE8557"
+        app:tabMaxWidth="0dp"
+        app:tabGravity="fill"
+        app:tabMode="fixed"  />
 
-    <LinearLayout
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/directchats"
-            android:layout_width="match_parent"
-            android:layout_weight="2"
-            android:textSize="30sp"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:textStyle="bold"
-            android:layout_height="wrap_content"
-            android:text="Direct Chats">
-        </TextView>
-        <Button
-            android:id="@+id/groupchats"
-            android:layout_width="match_parent"
-            android:layout_weight="3"
-            android:textSize="15sp"
-            android:layout_height="match_parent"
-            android:text="Groups">
-        </Button>
-
-
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/directchat1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:paddingLeft="20sp"
-        android:text="Direct Chat 1">
-    </Button>
-
-    <Button
-        android:id="@+id/directchat2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:paddingLeft="20sp"
-        android:text="Direct Chat 2">
-    </Button>
-
-    <Button
-        android:id="@+id/directchat3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:paddingLeft="20sp"
-        android:text="Direct Chat 3">
-    </Button>
-
-    <Button
-        android:id="@+id/directchat4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:paddingLeft="20sp"
-        android:text="Direct Chat 4">
-    </Button>
-
-
-
-
-
-
-
-
-
-    <Button
-        android:id="@+id/button_for_page2_direct_chat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="direct chat"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-
-    <Button
-        android:id="@+id/button_for_page3_group_chat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
-        android:text="group chat"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/button_for_page2_3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="216dp"
-        android:text="find devices"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.315" />
-
-
-
-
+        android:layout_height="match_parent" />
 </LinearLayout>

@@ -26,7 +26,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:background="@color/teal_200"
-        android:text="@string/change_pic" />
+        android:text="name" />
 
 
 </RelativeLayout>

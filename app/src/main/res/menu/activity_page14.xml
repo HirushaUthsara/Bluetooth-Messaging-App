@@ -2,10 +2,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:id="@+id/setting"
-        android:title="SETTING" />
+    <item android:id="@+id/profile"
+        android:title="PROFILE" />
+
+    <item android:id="@+id/search"
+        android:title="AVAILABILITY" />
 
     <item android:id="@+id/create_groupchat"
         android:title="CREATE GROUP CHAT" />
+
+    <item android:id="@+id/bluetooth"
+        android:title="BLUETOOTH" />
 
 </menu>
