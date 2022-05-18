@@ -27,7 +27,7 @@ public class DBHelper extends SQLiteOpenHelper {
         // useId and contactID will be basically their Mac Address
         db.execSQL("create Table UserDetails (UserID TEXT primary key, username TEXT,user_profile_pic BLOB)");
         db.execSQL("create Table DirectContacts (ContactID TEXT primary key, username TEXT,contact_profile_pic BLOB)");
-        db.execSQL("create Table Messages (MESSAGEID INTEGER primary key AUTOINCREMENT, TIME INTEGER,SENDERID INTEGER, RECEIVERID INTEGER, CONTENT TEXT)");
+        db.execSQL("create Table Messages (MESSAGEID INTEGER primary key AUTOINCREMENT, TIME INTEGER,SENDERID TEXT, RECEIVERID TEXT, CONTENT TEXT)");
     }
 
     @Override

@@ -5,8 +5,8 @@ public class Message {
     // model class for the messages
     private int id;
     private long time;
-    private int senderId;
-    private int receiverId;
+    private String senderId;
+    private String receiverId;
     private String content;
 
     // default constructor
@@ -14,7 +14,7 @@ public class Message {
     }
 
     // parametric constructor
-    public Message(int id,long time,int senderId,int receiverId, String content) {
+    public Message(int id,long time,String senderId,String receiverId, String content) {
         this.id = id;
         this.time = time;
         this.senderId = senderId;
@@ -40,19 +40,19 @@ public class Message {
         this.id = id;
     }
 
-    public int getSenderId() {
+    public String getSenderId() {
         return senderId;
     }
 
-    public void setSenderId(int senderId) {
+    public void setSenderId(String senderId) {
         this.senderId = senderId;
     }
 
-    public int getReceiverId() {
+    public String getReceiverId() {
         return receiverId;
     }
 
-    public void setReceiverId(int receiverId) {
+    public void setReceiverId(String receiverId) {
         this.receiverId = receiverId;
     }
 
@@ -62,5 +62,10 @@ public class Message {
 
     public void setTime(long time) {
         this.time = time;
+    }
+
+    public void sendMessage(){
+        allcomponents al = new allcomponents();
+        al.getReceiving_msg();
     }
 }
