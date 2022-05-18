@@ -1,53 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".page4">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/profile_pic"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="75dp"
-        android:src="@drawable/face"
-        app:civ_border_color="@color/black"
-        app:civ_border_overlay="true"
-        app:civ_border_width="4dp" />
 
-    <Button
-        android:id="@+id/pick_profile_pic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/profile_pic"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:background="@color/teal_200"
-        android:text="Select the Profile Picture" />
 
     <LinearLayout
-        android:id="@+id/user_name"
-        android:layout_width="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/pick_profile_pic"
-        android:layout_marginTop="32dp"
-        android:orientation="horizontal">
+        android:background="@color/cream"
+        android:layout_marginBottom="20dp">
+        <!--        lkn-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:textColor="@color/purple_500"
+            android:text="PROFILE">
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
 
         <TextView
-            android:id="@+id/ViewUserName"
+            android:id="@+id/usernamelabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:textColor="#666565">
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginLeft="5dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="9dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@drawable/group_def"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="1dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp">
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textAlignment="center"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:fontFamily="sans-serif"
-            android:text="TextView" />
+            android:text="IMAGE"
+            android:layout_gravity="center_vertical"></TextView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:hint="Select Photo"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+            <AutoCompleteTextView
+                android:id="@+id/auto_completetext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"></AutoCompleteTextView>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/updatebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="UPDATE"></Button>
     </LinearLayout>
 
 
-</RelativeLayout>
+</LinearLayout>
+
+

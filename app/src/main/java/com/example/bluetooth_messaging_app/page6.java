@@ -20,6 +20,7 @@ import java.util.ArrayList;
 public class page6 extends AppCompatActivity {
 
     ActivityPage6Binding binding;
+    String MyUserID; //This should be taken
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,9 +56,9 @@ public class page6 extends AppCompatActivity {
 
         //I should take messages of the particular chat by the database using a function
 
-        Message m1 = new Message(1,1200,2,3,"hi");
-        Message m2 = new Message(3,1300,1,5,"h");
-        Message m3 = new Message(2,1200,2,3,"hi");
+        Message m1 = new Message(1,1200,"B","C","hi");
+        Message m2 = new Message(3,1300,"A","A","h");
+        Message m3 = new Message(2,1200,"B","A","hi");
         messageModel.add(m1);
         messageModel.add(m2);
         messageModel.add(m3);
@@ -72,7 +73,7 @@ public class page6 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String msg = binding.typingtext.getText().toString();
-                final Message m = new Message(1,1,1,1,msg);
+                final Message m = new Message(1,1,MyUserID,userID,msg);
                 messageModel.add(m);
                 binding.typingtext.setText("");
             }

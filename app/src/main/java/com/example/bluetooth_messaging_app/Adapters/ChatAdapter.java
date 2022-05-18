@@ -17,6 +17,7 @@ import java.util.ArrayList;
 
 public class ChatAdapter extends RecyclerView.Adapter{
 
+    String MyUserID;
     ArrayList<Message> messageModel;
     Context context;
 
@@ -42,12 +43,11 @@ public class ChatAdapter extends RecyclerView.Adapter{
 
     @Override
     public int getItemViewType(int position){
-        if(messageModel.get(position).getSenderId()==1){      //Our ID
+        if(messageModel.get(position).getSenderId()==MyUserID){      //Our ID
             return SENDER_VIEW_TYPE;
         }else{
             return RECEIVER_VIEW_TYPE;
         }
-        //Should return SENDER_VIEW_TYPE or RECEIVER_VIEW_TYPE
 
     }
 

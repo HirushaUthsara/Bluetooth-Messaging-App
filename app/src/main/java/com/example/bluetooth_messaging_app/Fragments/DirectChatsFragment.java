@@ -58,7 +58,6 @@ public class DirectChatsFragment extends Fragment {
         binding.chatRecyclerView.setLayoutManager(layoutManager);
 
         //2:18:09
-
         return binding.getRoot();
     }
 }
