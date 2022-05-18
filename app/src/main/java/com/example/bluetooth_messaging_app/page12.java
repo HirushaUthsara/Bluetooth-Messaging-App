@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 public class page12 extends AppCompatActivity {
-
+//new
     String[] items = {"school","business","sports","friends","family"};
 
     AutoCompleteTextView autoCompleteText;

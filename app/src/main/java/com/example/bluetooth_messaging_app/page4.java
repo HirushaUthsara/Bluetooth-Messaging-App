@@ -113,7 +113,7 @@ public class page4 extends AppCompatActivity {
     TextView usernamelabel;
     Context context;
     DBHelper db = new DBHelper(context);
-    String Username = db.getUserName(); //username should be taken from the database
+    String Username = "Ruchira"; //username should be taken from the database
     int profilepicture = 0; //profile picture should be taken from the database
     int currentpic = profilepicture;
 
