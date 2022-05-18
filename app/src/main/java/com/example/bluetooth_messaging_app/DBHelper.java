@@ -77,6 +77,20 @@ public class DBHelper extends SQLiteOpenHelper {
         return username;
     }
 
+    public int getUserProfile(){
+        int profile_pic = 0;
+        SQLiteDatabase db = getReadableDatabase();
+        String query = "SELECT * FROM UserDetails LIMIT 1";
+
+        Cursor cursor = db.rawQuery(query,null);
+
+        if (cursor.moveToFirst()){
+            profile_pic = cursor.getInt(2);
+        }
+        db.close();
+        return profile_pic;
+    }
+
     public String getUserID(){
         String userid = null;
         SQLiteDatabase db = getReadableDatabase();
@@ -178,10 +192,10 @@ public class DBHelper extends SQLiteOpenHelper {
         return allContacts;
     }
 
-    public ArrayList<Message> loadMessages(){
+    public ArrayList<Message> loadMessages(String contactId){
 
         SQLiteDatabase db = getReadableDatabase();
-        String query = "SELECT * FROM  Messages";
+        String query = "SELECT * FROM  Messages Where contactId ==  SENDERID OR contactid == RECEIVERID ORDER BY TIME";
 
         Cursor cursor = db.rawQuery(query,null);
 
