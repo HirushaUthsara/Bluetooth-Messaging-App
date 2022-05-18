@@ -48,7 +48,7 @@ public class allcomponents extends AppCompatActivity {
 
     int REQUEST_ENABLE_BLUETOOTH=1;
 
-    private static final String APP_NAME = "BTChat";
+    private static final String APP_NAME = "ChitChat";
     private static final UUID MY_UUID=UUID.fromString("8ce255c0-223a-11e0-ac64-0803450c9a66");
 
     public String getSending_msg() {
