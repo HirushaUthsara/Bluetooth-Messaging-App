@@ -5,6 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -22,6 +23,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class page4 extends AppCompatActivity {
 
+    private Context context;
     private CircleImageView ProfileImage;
     private static final int PICK_IMAGE = 1;
     private Button btn;
@@ -34,6 +36,9 @@ public class page4 extends AppCompatActivity {
 
         btn = findViewById(R.id.pick_profile_pic);
         ProfileImage = findViewById(R.id.profile_pic);
+        context = this;
+
+        DBHelper dbHelper = new DBHelper(context);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

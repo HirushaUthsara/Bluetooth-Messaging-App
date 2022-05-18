@@ -1,20 +1,28 @@
 package com.example.bluetooth_messaging_app;
 
 public class Message {
+
+    // model class for the messages
     private int id;
+    private long time;
     private int senderId;
     private int receiverId;
     private String content;
 
+    // default constructor
     public Message() {
     }
 
-    public Message(int id,int senderId,int receiverId, String content) {
+    // parametric constructor
+    public Message(int id,long time,int senderId,int receiverId, String content) {
         this.id = id;
+        this.time = time;
         this.senderId = senderId;
         this.receiverId = receiverId;
         this.content = content;
     }
+
+    // getters and setters for attributes
 
     public String getContent() {
         return content;
@@ -46,5 +54,13 @@ public class Message {
 
     public void setReceiverId(int receiverId) {
         this.receiverId = receiverId;
+    }
+
+    public long getTime() {
+        return time;
+    }
+
+    public void setTime(long time) {
+        this.time = time;
     }
 }
