@@ -30,22 +30,23 @@ public class devicelist extends AppCompatActivity {
     private ArrayAdapter<String> adapterPairedDevices, adapterAvailableDevices;
     private Context context;
     private BluetoothAdapter bluetoothAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_devicelist);
         setContentView(R.layout.activity_devicelist);
         context = this;
 
         init();
     }
+
     private void init() {
         listPairedDevices = findViewById(R.id.list_paired_devices);
         listAvailableDevices = findViewById(R.id.list_available_devices);
         progressScanDevices = findViewById(R.id.progress_scan_devices);
 
-        adapterPairedDevices = new ArrayAdapter<String>(context, R.layout.list_items);
-        adapterAvailableDevices = new ArrayAdapter<String>(context, R.layout.list_items);
+        adapterPairedDevices = new ArrayAdapter<String>(context, R.layout.activity_devicelist);
+        adapterAvailableDevices = new ArrayAdapter<String>(context, R.layout.activity_devicelist);
 
         listPairedDevices.setAdapter(adapterPairedDevices);
         listAvailableDevices.setAdapter(adapterAvailableDevices);

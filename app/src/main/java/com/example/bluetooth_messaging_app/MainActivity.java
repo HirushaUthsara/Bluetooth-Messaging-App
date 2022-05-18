@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.example.bluetooth_messaging_app.Adapters.FragmentsAdapter;
 import com.example.bluetooth_messaging_app.Models.Users;
+import com.example.bluetooth_messaging_app.Models.main_chating;
 import com.example.bluetooth_messaging_app.databinding.ActivityMainBinding;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         floatingbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(),devicelist.class);
+                Intent i = new Intent(getApplicationContext(), main_chating.class);
                 startActivity(i);
             }
         });
