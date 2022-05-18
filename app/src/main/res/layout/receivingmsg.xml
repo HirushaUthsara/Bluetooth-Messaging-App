@@ -9,6 +9,7 @@
     android:layout_marginLeft="5dp"
     android:layout_marginEnd="7dp"
     android:layout_marginRight="7dp"
+    android:layout_marginTop="5dp"
     android:background="@drawable/sample_bg_receiver"
     android:maxWidth="310dp"
     android:maxHeight="400dp"
