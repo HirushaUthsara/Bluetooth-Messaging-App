@@ -16,15 +16,26 @@ import android.widget.Toast;
 import com.example.bluetooth_messaging_app.Adapters.FragmentsAdapter;
 import com.example.bluetooth_messaging_app.Models.Users;
 import com.example.bluetooth_messaging_app.databinding.ActivityMainBinding;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
+    FloatingActionButton floatingbutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        floatingbutton = findViewById(R.id.floatingbutton);
+        floatingbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),devicelist.class);
+                startActivity(i);
+            }
+        });
 
         binding.viewPager.setAdapter(new FragmentsAdapter(getSupportFragmentManager()));
         binding.tablayout.setupWithViewPager(binding.viewPager);

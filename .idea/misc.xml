@@ -7,6 +7,7 @@
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Bluetooth-Messaging-App/app/src/main/res/drawable/ic_baseline_send_24.xml" value="0.39921875" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Bluetooth-Messaging-App/app/src/main/res/drawable/normalchaticon.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Bluetooth-Messaging-App/app/src/main/res/drawable/onlinebubble.xml" value="0.39921875" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Bluetooth-Messaging-App/app/src/main/res/drawable/ovalrec.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Bluetooth-Messaging-App/app/src/main/res/drawable/roundbuton.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Bluetooth-Messaging-App/app/src/main/res/drawable/roundedittext.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Bluetooth-Messaging-App/app/src/main/res/layout/activity_allcomponents.xml" value="0.25" />
@@ -29,6 +30,7 @@
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Bluetooth-Messaging-App/app/src/main/res/layout/fragment_direct_chats.xml" value="0.25" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Bluetooth-Messaging-App/app/src/main/res/layout/fragment_groups.xml" value="0.25" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Bluetooth-Messaging-App/app/src/main/res/layout/fragment_groups_fragments.xml" value="0.25" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Bluetooth-Messaging-App/app/src/main/res/layout/fragment_online_users.xml" value="0.25" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Bluetooth-Messaging-App/app/src/main/res/layout/list_item.xml" value="0.25" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Bluetooth-Messaging-App/app/src/main/res/layout/list_items.xml" value="0.25" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Bluetooth-Messaging-App/app/src/main/res/menu/activity_page13.xml" value="0.25" />
@@ -37,7 +39,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

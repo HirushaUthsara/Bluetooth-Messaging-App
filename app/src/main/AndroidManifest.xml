@@ -22,7 +22,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Bluetooth_Messaging_App">
-        <activity android:name=".send_and_rec_msg"></activity>
+        <activity android:name=".Models.main_chating"></activity>
+        <activity android:name=".devicelist" />
+        <activity android:name=".send_and_rec_msg" />
         <activity android:name=".allcomponents" />
         <activity android:name=".list_paired_devices" />
         <activity android:name=".page2_3" />

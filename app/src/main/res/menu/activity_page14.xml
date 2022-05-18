@@ -6,12 +6,13 @@
         android:title="PROFILE" />
 
     <item android:id="@+id/search"
-        android:title="AVAILABILITY" />
+        android:title="PARED DEVICES" />
 
     <item android:id="@+id/create_groupchat"
         android:title="CREATE GROUP CHAT" />
 
     <item android:id="@+id/bluetooth"
-        android:title="BLUETOOTH" />
+        android:title="INSTANT CHAT" />
+
 
 </menu>
