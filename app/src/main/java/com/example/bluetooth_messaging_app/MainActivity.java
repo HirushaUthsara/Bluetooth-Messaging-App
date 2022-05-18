@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         floatingbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), main_chating.class);
+                Intent i = new Intent(getApplicationContext(), allcomponents.class);
                 startActivity(i);
             }
         });
@@ -65,9 +65,6 @@ public class MainActivity extends AppCompatActivity {
                 Intent i3 = new Intent(getApplicationContext(),page12.class);
                 startActivity(i3);
                 break;
-            case R.id.bluetooth:
-                Intent i4 = new Intent(getApplicationContext(),allcomponents.class);//page2
-                startActivity(i4);
         }
 
         return super.onOptionsItemSelected(item);
