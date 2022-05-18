@@ -56,6 +56,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.bluetooth:
                 Intent i4 = new Intent(getApplicationContext(),allcomponents.class);//page2
                 startActivity(i4);
+
+            case R.id.online_device:
+                Intent i5 = new Intent(getApplicationContext(),devicelist.class);//page2
+                startActivity(i5);
         }
 
         return super.onOptionsItemSelected(item);

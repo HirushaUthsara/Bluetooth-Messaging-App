@@ -13,5 +13,7 @@
 
     <item android:id="@+id/bluetooth"
         android:title="BLUETOOTH" />
+    <item android:id="@+id/online_device"
+        android:title="ONLINE DEVICE" />
 
 </menu>

@@ -10,6 +10,10 @@
     <string name="title_activity_page7">page7</string>
     <string name="title_activity_page8">page8</string>
     <string name="title_activity_page9">page9</string>
+
+    <string name="str_paired_devices">Paired Devices</string>
+    <string name="str_available_devices">Available Devices</string>
+    <string name="str_menu_scan_devices">Scan Devices</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
