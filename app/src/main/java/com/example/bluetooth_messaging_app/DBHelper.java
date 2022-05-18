@@ -195,7 +195,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public ArrayList<Message> loadMessages(String contactId){
 
         SQLiteDatabase db = getReadableDatabase();
-        String query = "SELECT * FROM  Messages Where contactId ==  SENDERID OR contactid == RECEIVERID ORDER BY TIME";
+        String query = "SELECT * FROM  Messages Where "+ contactId +" ==  SENDERID OR "+ contactId +" == RECEIVERID ORDER BY TIME";
 
         Cursor cursor = db.rawQuery(query,null);
 
