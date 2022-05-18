@@ -43,6 +43,7 @@ public class chating_prop {
         state = STATE_NONE;
         bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
     }
+
     public int getState() {
         return state;
     }
@@ -314,5 +315,4 @@ public class chating_prop {
 
         setState(STATE_CONNECTED);
     }
-
 }

@@ -38,7 +38,8 @@
         android:elevation="6dp"
         app:fabSize="mini"
         android:src="@drawable/onlinebubble"
-        android:background="#E9D3B8"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+        android:background="#E9D3B8"
+        android:contentDescription="TODO" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

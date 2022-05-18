@@ -37,6 +37,9 @@ public class allcomponents extends AppCompatActivity {
 
     SendReceive sendReceive;
 
+    String sending_msg;
+    String receiving_msg;
+
     static final int STATE_LISTENING = 1;
     static final int STATE_CONNECTING=2;
     static final int STATE_CONNECTED=3;
@@ -47,6 +50,14 @@ public class allcomponents extends AppCompatActivity {
 
     private static final String APP_NAME = "BTChat";
     private static final UUID MY_UUID=UUID.fromString("8ce255c0-223a-11e0-ac64-0803450c9a66");
+
+    public String getSending_msg() {
+        return sending_msg;
+    }
+
+    public String getReceiving_msg() {
+        return receiving_msg;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -148,6 +159,8 @@ public class allcomponents extends AppCompatActivity {
                     byte[] readBuff= (byte[]) msg.obj;
                     String tempMsg=new String(readBuff,0,msg.arg1);
                     msg_box.setText(tempMsg);
+                    sending_msg = tempMsg;
+                    System.out.println("sending====---------------------------------------------------------------"+tempMsg);
                     break;
             }
             return true;
@@ -278,6 +291,9 @@ public class allcomponents extends AppCompatActivity {
             {
                 try {
                     bytes=inputStream.read(buffer);
+                    //sending_msg =new String(buffer);
+                    //System.out.println("sending====---------------------------------------------------------------"+sending_msg);
+
                     handler.obtainMessage(STATE_MESSAGE_RECEIVED,bytes,-1,buffer).sendToTarget();
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -289,6 +305,8 @@ public class allcomponents extends AppCompatActivity {
         {
             try {
                 outputStream.write(bytes);
+                receiving_msg=new String(bytes);
+                System.out.println("receive====-----------------------------------------------------------------------"+receiving_msg);
             } catch (IOException e) {
                 e.printStackTrace();
             }

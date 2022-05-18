@@ -47,7 +47,7 @@ public class main_chating extends AppCompatActivity {
     public static final int MESSAGE_DEVICE_NAME = 3;
     public static final int MESSAGE_TOAST = 4;
 
-    public static final String DEVICE_NAME = "deviceName";
+    public static final String DEVICE_NAME = "CHIT CHAT";
     public static final String TOAST = "toast";
     private String connectedDevice;
 
@@ -92,6 +92,7 @@ public class main_chating extends AppCompatActivity {
             return false;
         }
     });
+
     private void setState(CharSequence subTitle) {
         getSupportActionBar().setSubtitle(subTitle);
     }
@@ -100,18 +101,20 @@ public class main_chating extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_chating);
+
         context = this;
 
         init();
         initBluetooth();
         chatUtils = new chating_prop(context, handler);
     }
+
     private void init() {
         listMainChat = findViewById(R.id.list_conversation);
         edCreateMessage = findViewById(R.id.ed_enter_message);
         btnSendMessage = findViewById(R.id.btn_send_msg);
 
-        adapterMainChat = new ArrayAdapter<String>(context, R.layout.list_items);//<-----------------------------------------
+        adapterMainChat = new ArrayAdapter<String>(context, R.layout.list_items);
         listMainChat.setAdapter(adapterMainChat);
 
         btnSendMessage.setOnClickListener(new View.OnClickListener() {
@@ -135,7 +138,7 @@ public class main_chating extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main_chating_activity, menu);//<----------------------------------------------------
+        getMenuInflater().inflate(R.menu.menu_main_activity, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -157,7 +160,7 @@ public class main_chating extends AppCompatActivity {
         if (ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(main_chating.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION_PERMISSION_REQUEST);
         } else {
-            Intent intent = new Intent(context, devicelist.class);//<---------------------------------------------------
+            Intent intent = new Intent(context, devicelist.class);
             startActivityForResult(intent, SELECT_DEVICE);
         }
     }
@@ -175,7 +178,7 @@ public class main_chating extends AppCompatActivity {
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         if (requestCode == LOCATION_PERMISSION_REQUEST) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                Intent intent = new Intent(context, devicelist.class);//<-----------------------------------------------------
+                Intent intent = new Intent(context, devicelist.class);
                 startActivityForResult(intent, SELECT_DEVICE);
             } else {
                 new AlertDialog.Builder(context)
