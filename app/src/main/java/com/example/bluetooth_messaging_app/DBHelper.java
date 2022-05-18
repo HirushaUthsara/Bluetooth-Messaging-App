@@ -24,8 +24,8 @@ public class DBHelper extends SQLiteOpenHelper {
 
         // tables of database constructed here
         // useId and contactID will be basically their Mac Address
-        db.execSQL("create Table UserDetails (UserID INTEGER primary key, username TEXT,user_profile_pic BLOB)");
-        db.execSQL("create Table DirectContacts (ContactID INTEGER primary key, username TEXT,contact_profile_pic BLOB)");
+        db.execSQL("create Table UserDetails (UserID TEXT primary key, username TEXT,user_profile_pic BLOB)");
+        db.execSQL("create Table DirectContacts (ContactID TEXT primary key, username TEXT,contact_profile_pic BLOB)");
         db.execSQL("create Table Messages (MESSAGEID INTEGER primary key AUTOINCREMENT, TIME INTEGER,SENDERID INTEGER, RECEIVERID INTEGER, CONTENT TEXT)");
     }
 
@@ -57,6 +57,23 @@ public class DBHelper extends SQLiteOpenHelper {
         // close database
         sqLiteDatabase.close();
     }
+
+
+    public void storeContact(Contact cnt){     // store the Contact object in database
+
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("ContactID",cnt.getId());
+        contentValues.put("username",cnt.getUsername());
+        contentValues.put("contact_profile_pic",(byte[]) null);
+
+        // save to table
+        sqLiteDatabase.insert("DirectContacts",null,contentValues);
+        // close database
+        sqLiteDatabase.close();
+    }
+
 
     public void initializeUser(String username, @Nullable Bitmap profile_pic){     // initialize user details
 
@@ -101,9 +118,11 @@ public class DBHelper extends SQLiteOpenHelper {
                 return res1.toString();
             }
         } catch (Exception ex) {
+            ex.printStackTrace();
         }
         return "";
     }
+
 
 
 }

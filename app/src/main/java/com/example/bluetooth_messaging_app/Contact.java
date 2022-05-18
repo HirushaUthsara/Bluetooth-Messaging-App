@@ -5,8 +5,7 @@ import android.graphics.Bitmap;
 public class Contact {
 
     // model class for the contact
-    private int id;
-    private String username;
+    private String id,username;
     private Bitmap profile_pic;
 
     // default constructor
@@ -14,7 +13,7 @@ public class Contact {
     public Contact() {
     }
     // parametric constructor
-    public Contact(int id,String username,Bitmap profile_pic) {
+    public Contact(String id,String username,Bitmap profile_pic) {
         this.id = id;
         this.username = username;
         this.profile_pic = profile_pic;
@@ -22,11 +21,11 @@ public class Contact {
 
     // getters and setters for attributes
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
