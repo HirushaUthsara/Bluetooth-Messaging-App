@@ -22,16 +22,16 @@ public class ChatAdapter extends RecyclerView.Adapter{
 
     ArrayList<Message> messageModel;
     Context context;
-    DBHelper db = new DBHelper(context);
-    String MyUserID = db.getUserID();
+    String MyUserID;
 
 
     int SENDER_VIEW_TYPE = 1;
     int RECEIVER_VIEW_TYPE = 2;
 
-    public ChatAdapter(ArrayList<Message> messageModel,Context context){
+    public ChatAdapter(ArrayList<Message> messageModel,Context context,String MyUserID){
         this.messageModel = messageModel;
         this.context = context;
+        this.MyUserID = MyUserID;
     }
 
     @NonNull

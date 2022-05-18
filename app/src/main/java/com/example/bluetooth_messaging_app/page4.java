@@ -22,18 +22,22 @@ public class page4 extends AppCompatActivity {
     ImageView profilepic;
     Button updatebutton;
     TextView usernamelabel;
+    int currentpic;
     String userid;
     Context context = this;
-    DBHelper db = new DBHelper(context);
-    String Username = db.getUserName(); //username should be taken from the database
-    int profilepicture = db.getUserProfile(); //profile picture should be taken from the database
-    int currentpic = profilepicture;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_page4);
+
+        DBHelper db = new DBHelper(context);
+        db.initializeUser("Hirusha Uthsara",2);
+        String Username = db.getUserName(); //username should be taken from the database
+        int profilepicture = db.getUserProfile(); //profile picture should be taken from the database
+        currentpic = profilepicture;
 
         usernamelabel = findViewById(R.id.usernamelabel);
         usernamelabel.setText(Username);

@@ -23,14 +23,16 @@ public class page6 extends AppCompatActivity {
 //new
     ActivityPage6Binding binding;
     Context context = this;
-    DBHelper db = new DBHelper(context);
-    String MyUserID = db.getUserID(); //This should be taken
+    String MyUserID; //This should be taken
     ImageView profilepicture;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
+
+        DBHelper db = new DBHelper(context);
+        MyUserID = db.getUserID();
 
         binding = ActivityPage6Binding.inflate(getLayoutInflater());
 
@@ -79,7 +81,7 @@ public class page6 extends AppCompatActivity {
         messageModel.add(m2);
         messageModel.add(m3);
 
-        final ChatAdapter chatAdapter = new ChatAdapter(messageModel,this);
+        final ChatAdapter chatAdapter = new ChatAdapter(messageModel,this,MyUserID);
         binding.directchatmessages.setAdapter(chatAdapter);
 
         LinearLayoutManager layoutmanager = new LinearLayoutManager(this);

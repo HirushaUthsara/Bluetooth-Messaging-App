@@ -91,7 +91,7 @@ public class DBHelper extends SQLiteOpenHelper {
         return profile_pic;
     }
 
-    public Boolean setUserProfile(String userid ,int pic){
+    public void setUserProfile(String userid ,int pic){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("user_profile_pic",pic);
@@ -101,16 +101,6 @@ public class DBHelper extends SQLiteOpenHelper {
         long result = db.update("UserDetails",contentValues,"UserID = ?",new String[]{userid});
 
         db.close();
-
-        if (cursor.getCount()>0){
-            if (result == -1){
-                return false;
-            } else {
-                return true;
-            }
-        } else {
-            return false;
-        }
 
     }
 
@@ -145,7 +135,7 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
 
-    public void initializeUser(String username){     // initialize user details
+    public void initializeUser(String username,int pic){     // initialize user details
 
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
 
@@ -155,7 +145,7 @@ public class DBHelper extends SQLiteOpenHelper {
         contentValues.put("username",username);
 
 
-        contentValues.put("user_profile_pic", 0);
+        contentValues.put("user_profile_pic", pic);
 
         // save to table
         sqLiteDatabase.insert("UserDetails",null,contentValues);
