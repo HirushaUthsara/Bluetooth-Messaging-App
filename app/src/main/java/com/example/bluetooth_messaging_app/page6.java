@@ -20,7 +20,7 @@ import com.example.bluetooth_messaging_app.databinding.ActivityPage6Binding;
 import java.util.ArrayList;
 
 public class page6 extends AppCompatActivity {
-
+//new
     ActivityPage6Binding binding;
     Context context = this;
     DBHelper db = new DBHelper(context);

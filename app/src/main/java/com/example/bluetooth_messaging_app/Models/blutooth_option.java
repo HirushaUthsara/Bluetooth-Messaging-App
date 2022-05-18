@@ -43,7 +43,7 @@ public class blutooth_option {
         {
             if (!bluetoothAdapter.isEnabled()) {
                 Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-                startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
+                //startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
             }
             return true;
 
@@ -117,7 +117,7 @@ public class blutooth_option {
                 if (socket != null) {
                     // A connection was accepted. Perform work associated with
                     // the connection in a separate thread.
-                    manageMyConnectedSocket(socket);// to tranfering data
+                    //manageMyConnectedSocket(socket);// to tranfering data
                     try {
                         mmServerSocket.close();
                     } catch (IOException e) {
@@ -176,7 +176,7 @@ public class blutooth_option {
 
             // The connection attempt succeeded. Perform work associated with
             // the connection in a separate thread.
-            manageMyConnectedSocket(mmSocket);// to tranfering data
+            //manageMyConnectedSocket(mmSocket);// to tranfering data
         }
 
         // Closes the client socket and causes the thread to finish.
