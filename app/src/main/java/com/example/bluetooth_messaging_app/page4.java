@@ -15,6 +15,7 @@ import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import java.io.IOException;
 import java.net.URI;
@@ -28,6 +29,9 @@ public class page4 extends AppCompatActivity {
     private static final int PICK_IMAGE = 1;
     private Button btn;
     private static String LOG_TAG = "UIElementsPracticeLog";
+    private DBHelper dbHelper;
+    private TextView usr;
+    private String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +42,7 @@ public class page4 extends AppCompatActivity {
         ProfileImage = findViewById(R.id.profile_pic);
         context = this;
 
-        DBHelper dbHelper = new DBHelper(context);
+        dbHelper = new DBHelper(context);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +53,15 @@ public class page4 extends AppCompatActivity {
                 startActivityForResult(Intent.createChooser(intent,"Pick Image"),PICK_IMAGE);
             }
         });
+
+        //test
+        dbHelper.initializeUser("HirushaUthsara",null);
+
+        // display username
+        username = dbHelper.getUserName();
+        usr = findViewById(R.id.ViewUserName);
+        usr.setText("Username : "+username);
+
     }
 
     @Override
@@ -58,7 +71,6 @@ public class page4 extends AppCompatActivity {
         if (requestCode == 1){
             Uri uri = data.getData();
             ProfileImage.setImageURI(uri);
-//
         }
 
     }

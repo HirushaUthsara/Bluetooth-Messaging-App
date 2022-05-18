@@ -2,6 +2,7 @@ package com.example.bluetooth_messaging_app;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.graphics.Bitmap;
@@ -56,6 +57,19 @@ public class DBHelper extends SQLiteOpenHelper {
         sqLiteDatabase.insert("Messages",null,contentValues);
         // close database
         sqLiteDatabase.close();
+    }
+
+    public String getUserName(){
+        String username = null;
+        SQLiteDatabase db = getReadableDatabase();
+        String query = "SELECT * FROM UserDetails LIMIT 1";
+
+        Cursor cursor = db.rawQuery(query,null);
+
+        if (cursor.moveToFirst()){
+            username = cursor.getString(1);
+        }
+        return username;
     }
 
 
