@@ -37,7 +37,7 @@
         android:layout_gravity="end|bottom"
         android:layout_marginBottom="60dp"
         android:layout_marginRight="20dp"
-        android:backgroundTint="#E9D3B8"
+        android:backgroundTint="#BE9768"
         android:outlineAmbientShadowColor="#E9D3B8"
         android:outlineSpotShadowColor="#E9D3B8"
         android:elevation="6dp"

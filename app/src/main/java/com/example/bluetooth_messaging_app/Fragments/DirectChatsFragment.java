@@ -39,7 +39,7 @@ public class DirectChatsFragment extends Fragment {
         Users u3 = new Users("A3",3,"Kalum","wrvw");
         Users u4 = new Users("A4",4,"Wimal","brb");
         Users u6 = new Users("A5",5,"Sahan",",ujm yh");
-        Users u7 = new Users("A6",2,"Charith","ehth");
+        Users u7 = new Users("A6",6,"Charith","ehth");
         Users u8 = new Users("A7",3,"Malith","nerts");
 
         list.add(u1);

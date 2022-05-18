@@ -14,9 +14,9 @@
         android:layout_height="wrap_content"
         android:background="#FDF9F7">
         <ImageView
+            android:id="@+id/profilepic"
             android:layout_width="40sp"
             android:layout_height="40sp"
-            android:background="@drawable/face"
             android:layout_gravity="center"
             android:layout_margin="5sp"
             ></ImageView>

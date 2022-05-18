@@ -15,9 +15,9 @@
         android:background="#FDF9F7">
 
         <ImageView
+            android:id="@+id/profilepic"
             android:layout_width="40sp"
             android:layout_height="40sp"
-            android:background="@drawable/group"
             android:layout_marginLeft="10sp"
             android:layout_marginBottom="4sp"
             android:layout_marginTop="4sp"
@@ -74,7 +74,9 @@
             android:background="@drawable/roundbuton"
             android:backgroundTint="#FDF9F7"
             android:layout_marginEnd="5sp"
-            android:textSize="25dp">
+            android:textSize="15dp"
+            android:paddingLeft="15dp"
+            android:textColor="@color/purple_500">
         </EditText>
 
         <Button

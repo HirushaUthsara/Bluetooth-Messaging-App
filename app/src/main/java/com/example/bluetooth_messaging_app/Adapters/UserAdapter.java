@@ -44,6 +44,52 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder>{
         Users users = list.get(position);
         //Picasso.get().load(users.getProfilepicture()).placeholder(R.drawable.face).into(holder.image);
         //holder.image.setImageDrawable();
+        if(DorC==0) {
+            switch (users.getProfilepicture()) {
+                case 1:
+                    holder.image.setImageResource(R.drawable.pic1);
+                    break;
+                case 2:
+                    holder.image.setImageResource(R.drawable.pic2);
+                    break;
+                case 3:
+                    holder.image.setImageResource(R.drawable.pic3);
+                    break;
+                case 4:
+                    holder.image.setImageResource(R.drawable.pic4);
+                    break;
+                case 5:
+                    holder.image.setImageResource(R.drawable.pic5);
+                    break;
+                case 6:
+                    holder.image.setImageResource(R.drawable.pic6);
+                    break;
+                default:
+                    holder.image.setImageResource(R.drawable.pic0);
+                    break;
+            }
+        }else{
+            switch (users.getProfilepicture()){
+                case 1:
+                    holder.image.setImageResource(R.drawable.university);
+                    break;
+                case 2:
+                    holder.image.setImageResource(R.drawable.business);
+                    break;
+                case 3:
+                    holder.image.setImageResource(R.drawable.sports);
+                    break;
+                case 4:
+                    holder.image.setImageResource(R.drawable.friends);
+                    break;
+                case 5:
+                    holder.image.setImageResource(R.drawable.family);
+                    break;
+                default:
+                    holder.image.setImageResource(R.drawable.group_def);
+                    break;
+            }
+        }
         holder.username.setText(users.getUsername());
         holder.lastmessage.setText(users.getLastmessage());
 

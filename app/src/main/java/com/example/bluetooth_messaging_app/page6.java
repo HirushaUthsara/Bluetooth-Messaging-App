@@ -7,6 +7,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,6 +22,7 @@ public class page6 extends AppCompatActivity {
 
     ActivityPage6Binding binding;
     String MyUserID; //This should be taken
+    ImageView profilepicture;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,9 +33,20 @@ public class page6 extends AppCompatActivity {
 
         String userID = getIntent().getStringExtra("userID");
         String username = getIntent().getStringExtra("username");
-        String profilepic = getIntent().getStringExtra("profilepic");
+        int Profilepic = getIntent().getIntExtra("profilepic",0);
 
         setContentView(binding.getRoot());
+
+        profilepicture = findViewById(R.id.profilepic);
+        switch(Profilepic){
+            case 1: profilepicture.setImageResource(R.drawable.pic1);break;
+            case 2: profilepicture.setImageResource(R.drawable.pic2);break;
+            case 3: profilepicture.setImageResource(R.drawable.pic3);break;
+            case 4: profilepicture.setImageResource(R.drawable.pic4);break;
+            case 5: profilepicture.setImageResource(R.drawable.pic5);break;
+            case 6: profilepicture.setImageResource(R.drawable.pic6);break;
+            default: profilepicture.setImageResource(R.drawable.pic0);break;
+        }
 
         binding.contactname.setText(username);
         binding.contactname.setOnClickListener(new View.OnClickListener(){

@@ -91,6 +91,7 @@ package com.example.bluetooth_messaging_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -109,10 +110,12 @@ public class page4 extends AppCompatActivity {
     ArrayAdapter<String> adapteritems;
     ImageView profilepic;
     Button updatebutton;
-    String Username = "Ruchira"; //username should be taken from the database
+    TextView usernamelabel;
+    Context context;
+    DBHelper db = new DBHelper(context);
+    String Username = db.getUserName(); //username should be taken from the database
     int profilepicture = 0; //profile picture should be taken from the database
     int currentpic = profilepicture;
-    TextView usernamelabel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
