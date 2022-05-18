@@ -28,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        DBHelper db = new DBHelper(this);
+        db.initializeUser("Hirusha Uthsara",2);
+
 
         floatingbutton = findViewById(R.id.floatingbutton);
         floatingbutton.setOnClickListener(new View.OnClickListener() {

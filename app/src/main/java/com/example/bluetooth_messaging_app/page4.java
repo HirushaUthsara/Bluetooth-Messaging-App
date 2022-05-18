@@ -34,7 +34,6 @@ public class page4 extends AppCompatActivity {
         setContentView(R.layout.activity_page4);
 
         DBHelper db = new DBHelper(context);
-        db.initializeUser("Hirusha Uthsara",2);
         String Username = db.getUserName(); //username should be taken from the database
         int profilepicture = db.getUserProfile(); //profile picture should be taken from the database
         currentpic = profilepicture;
