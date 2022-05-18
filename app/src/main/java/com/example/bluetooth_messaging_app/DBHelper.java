@@ -29,8 +29,8 @@ public class DBHelper extends SQLiteOpenHelper {
 
         // tables of database constructed here
         // useId and contactID will be basically their Mac Address
-        db.execSQL("create Table UserDetails (UserID TEXT primary key, username TEXT,user_profile_pic BLOB)");
-        db.execSQL("create Table DirectContacts (ContactID TEXT primary key, username TEXT,contact_profile_pic BLOB)");
+        db.execSQL("create Table UserDetails (UserID TEXT primary key, username TEXT,user_profile_pic INTEGER)");
+        db.execSQL("create Table DirectContacts (ContactID TEXT primary key, username TEXT,contact_profile_pic INTEGER)");
         db.execSQL("create Table Messages (MESSAGEID INTEGER primary key AUTOINCREMENT, TIME INTEGER,SENDERID TEXT, RECEIVERID TEXT, CONTENT TEXT)");
     }
 
@@ -48,7 +48,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public void storeMessage(Message msg){     // store the message object in database
 
-        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
 
         ContentValues contentValues = new ContentValues();
 
@@ -65,7 +65,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public String getUserName(){
         String username = null;
-        SQLiteDatabase db = getReadableDatabase();
+        SQLiteDatabase db = this.getReadableDatabase();
         String query = "SELECT * FROM UserDetails LIMIT 1";
 
         Cursor cursor = db.rawQuery(query,null);
@@ -79,7 +79,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public int getUserProfile(){
         int profile_pic = 0;
-        SQLiteDatabase db = getReadableDatabase();
+        SQLiteDatabase db = this.getReadableDatabase();
         String query = "SELECT * FROM UserDetails LIMIT 1";
 
         Cursor cursor = db.rawQuery(query,null);
@@ -91,9 +91,32 @@ public class DBHelper extends SQLiteOpenHelper {
         return profile_pic;
     }
 
+    public Boolean setUserProfile(String userid ,int pic){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("user_profile_pic",pic);
+
+        Cursor cursor = db.rawQuery("SELECT * FROM UserDetails Where UserID = ? ",new String[] {userid});
+
+        long result = db.update("UserDetails",contentValues,"UserID = ?",new String[]{userid});
+
+        db.close();
+
+        if (cursor.getCount()>0){
+            if (result == -1){
+                return false;
+            } else {
+                return true;
+            }
+        } else {
+            return false;
+        }
+
+    }
+
     public String getUserID(){
         String userid = null;
-        SQLiteDatabase db = getReadableDatabase();
+        SQLiteDatabase db = this.getReadableDatabase();
         String query = "SELECT * FROM UserDetails LIMIT 1";
 
         Cursor cursor = db.rawQuery(query,null);
@@ -108,7 +131,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public void storeContact(Contact cnt){     // store the Contact object in database
 
-        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
 
         ContentValues contentValues = new ContentValues();
         contentValues.put("ContactID",cnt.getId());
@@ -122,9 +145,9 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
 
-    public void initializeUser(String username, int profile_pic){     // initialize user details
+    public void initializeUser(String username){     // initialize user details
 
-        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
 
         ContentValues contentValues = new ContentValues();
 
@@ -132,7 +155,7 @@ public class DBHelper extends SQLiteOpenHelper {
         contentValues.put("username",username);
 
 
-        contentValues.put("user_profile_pic", profile_pic);
+        contentValues.put("user_profile_pic", 0);
 
         // save to table
         sqLiteDatabase.insert("UserDetails",null,contentValues);
@@ -172,7 +195,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public ArrayList<Contact> loadAllContacts(){
 
-        SQLiteDatabase db = getReadableDatabase();
+        SQLiteDatabase db = this.getReadableDatabase();
         String query = "SELECT * FROM  DirectContacts";
 
         Cursor cursor = db.rawQuery(query,null);
@@ -194,8 +217,8 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public ArrayList<Message> loadMessages(String contactId){
 
-        SQLiteDatabase db = getReadableDatabase();
-        String query = "SELECT * FROM  Messages Where "+ contactId +" ==  SENDERID OR "+ contactId +" == RECEIVERID ORDER BY TIME";
+        SQLiteDatabase db = this.getReadableDatabase();
+        String query = "SELECT * FROM  Messages Where "+ contactId +" =  SENDERID OR "+ contactId +" = RECEIVERID ORDER BY TIME";
 
         Cursor cursor = db.rawQuery(query,null);
 

@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.bluetooth_messaging_app.DBHelper;
 import com.example.bluetooth_messaging_app.Message;
 import com.example.bluetooth_messaging_app.R;
 
@@ -17,9 +18,13 @@ import java.util.ArrayList;
 
 public class ChatAdapter extends RecyclerView.Adapter{
 
-    String MyUserID;
+
+
     ArrayList<Message> messageModel;
     Context context;
+    DBHelper db = new DBHelper(context);
+    String MyUserID = db.getUserID();
+
 
     int SENDER_VIEW_TYPE = 1;
     int RECEIVER_VIEW_TYPE = 2;

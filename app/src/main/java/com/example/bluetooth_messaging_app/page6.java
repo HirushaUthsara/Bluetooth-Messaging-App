@@ -1,5 +1,6 @@
 package com.example.bluetooth_messaging_app;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -21,7 +22,9 @@ import java.util.ArrayList;
 public class page6 extends AppCompatActivity {
 
     ActivityPage6Binding binding;
-    String MyUserID; //This should be taken
+    Context context = this;
+    DBHelper db = new DBHelper(context);
+    String MyUserID = db.getUserID(); //This should be taken
     ImageView profilepicture;
 
     @Override
