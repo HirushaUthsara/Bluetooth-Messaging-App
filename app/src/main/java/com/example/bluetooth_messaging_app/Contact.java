@@ -6,14 +6,14 @@ public class Contact {
 
     // model class for the contact
     private String id,username;
-    private Bitmap profile_pic;
+    private int profile_pic;
 
     // default constructor
 
     public Contact() {
     }
     // parametric constructor
-    public Contact(String id,String username,Bitmap profile_pic) {
+    public Contact(String id,String username,int profile_pic) {
         this.id = id;
         this.username = username;
         this.profile_pic = profile_pic;
@@ -37,11 +37,11 @@ public class Contact {
         this.username = username;
     }
 
-    public Bitmap getProfile_pic() {
+    public int getProfile_pic() {
         return profile_pic;
     }
 
-    public void setProfile_pic(Bitmap profile_pic) {
+    public void setProfile_pic(int profile_pic) {
         this.profile_pic = profile_pic;
     }
 }

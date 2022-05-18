@@ -16,6 +16,10 @@ import java.util.Collections;
 
 public class DBHelper extends SQLiteOpenHelper {
 
+    private final ArrayList<Contact> allContacts = new ArrayList<>();
+    private final ArrayList<Message> allMessages = new ArrayList<>();
+    private Context context;
+
     public DBHelper(Context context) {
         super(context, "Userdata.db", null , 1);
     }
@@ -69,7 +73,22 @@ public class DBHelper extends SQLiteOpenHelper {
         if (cursor.moveToFirst()){
             username = cursor.getString(1);
         }
+        db.close();
         return username;
+    }
+
+    public String getUserID(){
+        String userid = null;
+        SQLiteDatabase db = getReadableDatabase();
+        String query = "SELECT * FROM UserDetails LIMIT 1";
+
+        Cursor cursor = db.rawQuery(query,null);
+
+        if (cursor.moveToFirst()){
+            userid = cursor.getString(0);
+        }
+        db.close();
+        return userid;
     }
 
 
@@ -89,7 +108,7 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
 
-    public void initializeUser(String username, @Nullable Bitmap profile_pic){     // initialize user details
+    public void initializeUser(String username, int profile_pic){     // initialize user details
 
         SQLiteDatabase sqLiteDatabase = getWritableDatabase();
 
@@ -99,7 +118,7 @@ public class DBHelper extends SQLiteOpenHelper {
         contentValues.put("username",username);
 
 
-        contentValues.put("user_profile_pic", (byte[]) null);
+        contentValues.put("user_profile_pic", profile_pic);
 
         // save to table
         sqLiteDatabase.insert("UserDetails",null,contentValues);
@@ -135,6 +154,51 @@ public class DBHelper extends SQLiteOpenHelper {
             ex.printStackTrace();
         }
         return "";
+    }
+
+    public ArrayList<Contact> loadAllContacts(){
+
+        SQLiteDatabase db = getReadableDatabase();
+        String query = "SELECT * FROM  DirectContacts";
+
+        Cursor cursor = db.rawQuery(query,null);
+
+        if (cursor.moveToFirst()){
+            do {
+                Contact c = new Contact();
+                c.setId(cursor.getString(0));
+                c.setUsername(cursor.getString(1));
+                c.setProfile_pic(cursor.getInt(2));
+
+                allContacts.add(c);
+            }
+            while (cursor.moveToNext());
+        }
+        db.close();
+        return allContacts;
+    }
+
+    public ArrayList<Message> loadMessages(){
+
+        SQLiteDatabase db = getReadableDatabase();
+        String query = "SELECT * FROM  Messages";
+
+        Cursor cursor = db.rawQuery(query,null);
+
+        if (cursor.moveToFirst()){
+            do {
+                Message msg = new Message();
+                msg.setId(cursor.getInt(0));
+                msg.setTime(cursor.getLong(1));
+                msg.setSenderId(cursor.getString(2));
+                msg.setReceiverId(cursor.getString(3));
+                msg.setContent(cursor.getString(4));
+
+            }
+            while (cursor.moveToNext());
+        }
+        db.close();
+        return allMessages;
     }
 
 
