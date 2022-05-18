@@ -8,5 +8,5 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FDF9F7</color>
     <color name="white">#FFFFFFFF</color>
-
+    <color name="sender">#E9CCB0</color>
 </resources>

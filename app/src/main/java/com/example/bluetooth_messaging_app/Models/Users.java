@@ -1,29 +1,22 @@
 package com.example.bluetooth_messaging_app.Models;
 
 public class Users {
-    String profilepicture,username,mail,password,userID,lastmessage;
+    int profilepicture;
+    String username,userID,lastmessage;
 
-    public Users(String profilepicture, String username, String mail, String password, String userID, String lastmessage) {
-        this.profilepicture = profilepicture;
-        this.username = username;
-        this.mail = mail;
-        this.password = password;
+    public Users(String userID, int profilepicture, String username, String lastmessage) {
         this.userID = userID;
-        this.lastmessage = lastmessage;
-    }
-
-    public Users(String profilepicture, String username, String lastmessage) {
         this.profilepicture = profilepicture;
         this.username = username;
         this.lastmessage = lastmessage;
     }
 
 
-    public String getProfilepicture() {
+    public int getProfilepicture() {
         return profilepicture;
     }
 
-    public void setProfilepicture(String profilepicture) {
+    public void setProfilepicture(int profilepicture) {
         this.profilepicture = profilepicture;
     }
 
@@ -33,22 +26,6 @@ public class Users {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public String getMail() {
-        return mail;
-    }
-
-    public void setMail(String mail) {
-        this.mail = mail;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public String getUserID() {

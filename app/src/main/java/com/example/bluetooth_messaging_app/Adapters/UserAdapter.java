@@ -42,7 +42,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Users users = list.get(position);
-        Picasso.get().load(users.getProfilepicture()).placeholder(R.drawable.face).into(holder.image);
+        //Picasso.get().load(users.getProfilepicture()).placeholder(R.drawable.face).into(holder.image);
         //holder.image.setImageDrawable();
         holder.username.setText(users.getUsername());
         holder.lastmessage.setText(users.getLastmessage());

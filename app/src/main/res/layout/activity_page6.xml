@@ -20,15 +20,16 @@
             android:layout_gravity="center"
             android:layout_margin="5sp"
             ></ImageView>
-        <Button
+        <TextView
             android:id="@+id/contactname"
             android:layout_width="match_parent"
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:gravity="center"
+            android:background="@color/sender"
             android:layout_gravity="center"
-            android:textSize="20sp">
-            </Button>
+            android:textSize="30sp">
+            </TextView>
 
         <Button
             android:id="@+id/invitebutton"
@@ -69,7 +70,9 @@
             android:backgroundTint="#FDF9F7"
             android:layout_marginEnd="5sp"
             android:background="@drawable/roundbuton"
-            android:textSize="25dp">
+            android:textSize="15dp"
+            android:textColor="@color/purple_500"
+            android:paddingLeft="15dp">
         </EditText>
 
         <Button

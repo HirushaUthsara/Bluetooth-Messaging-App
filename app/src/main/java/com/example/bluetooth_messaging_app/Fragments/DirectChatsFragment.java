@@ -32,13 +32,15 @@ public class DirectChatsFragment extends Fragment {
         // Inflate the layout for this fragment
         binding= FragmentDirectChatsBinding.inflate(inflater, container, false);
 
-        Users u1 = new Users("#A77954","Chiran","Hi");
-        Users u2 = new Users("a","Hirusha","Hello");
-        Users u3 = new Users("a","Kalum","wrvw");
-        Users u4 = new Users("a","Wimal","brb");
-        Users u6 = new Users("a","Sahan",",ujm yh");
-        Users u7 = new Users("a","Charith","ehth");
-        Users u8 = new Users("a","Malith","nerts");
+        //I should take the arraylist from the database using a methaod and assignit to the list
+
+        Users u1 = new Users("A1",1,"Chiran","Hi");
+        Users u2 = new Users("A2",2,"Hirusha","Hello");
+        Users u3 = new Users("A3",3,"Kalum","wrvw");
+        Users u4 = new Users("A4",4,"Wimal","brb");
+        Users u6 = new Users("A5",5,"Sahan",",ujm yh");
+        Users u7 = new Users("A6",2,"Charith","ehth");
+        Users u8 = new Users("A7",3,"Malith","nerts");
 
         list.add(u1);
         list.add(u2);

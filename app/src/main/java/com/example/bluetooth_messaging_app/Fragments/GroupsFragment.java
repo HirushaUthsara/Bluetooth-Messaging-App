@@ -32,13 +32,13 @@ public class GroupsFragment extends Fragment {
         // Inflate the layout for this fragment
         binding= FragmentGroupsBinding.inflate(inflater, container, false);
 
-        Users u1 = new Users("a","Colombo","Hi");
-        Users u2 = new Users("a","Kalutara","Hello");
-        Users u3 = new Users("a","Jaffna","wrvw");
-        Users u4 = new Users("a","Galle","brb");
-        Users u6 = new Users("a","Matara",",ujm yh");
-        Users u7 = new Users("a","Gampaha","ehth");
-        Users u8 = new Users("a","Cricket","nerts");
+        Users u1 = new Users("A1",1,"Colombo","Hi");
+        Users u2 = new Users("A1",2,"Kalutara","Hello");
+        Users u3 = new Users("A1",3,"Jaffna","wrvw");
+        Users u4 = new Users("A1",4,"Galle","brb");
+        Users u6 = new Users("A1",5,"Matara",",ujm yh");
+        Users u7 = new Users("A1",1,"Gampaha","ehth");
+        Users u8 = new Users("A1",2,"Cricket","nerts");
 
         list.add(u1);
         list.add(u2);
