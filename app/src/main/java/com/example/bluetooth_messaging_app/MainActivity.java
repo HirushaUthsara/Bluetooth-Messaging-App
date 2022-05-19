@@ -32,11 +32,11 @@ public class MainActivity extends AppCompatActivity {
         DBHelper db = new DBHelper(this);
         db.initializeUser("Hirusha Uthsara",2);
 
-        System.out.println("Mac Address --------------------------------------------------->>>>>>>>>>>>>>>"+db.getUserID());
+        //System.out.println("Mac Address --------------------------------------------------->>>>>>>>>>>>>>>"+db.getUserID());
 
-
+        //This is the floating button at the bottom of the main layout
         floatingbutton = findViewById(R.id.floatingbutton);
-        floatingbutton.setOnClickListener(new View.OnClickListener() {
+        floatingbutton.setOnClickListener(new View.OnClickListener() {  //On the click it directs us to the all components
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), allcomponents.class);
@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        //This part handles the pop up list of the main layout
         switch(item.getItemId()){
             case R.id.profile:
                 Intent i = new Intent(getApplicationContext(),page4.class);
