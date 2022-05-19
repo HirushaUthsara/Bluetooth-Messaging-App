@@ -38,6 +38,7 @@ public class DirectChatsFragment extends Fragment {
         list = db.loadAllUsers();
         //I should take the arraylist from the database using a methaod and assign it to the list
         //Instead of that i created some sample data here
+        //
 
         //Sending data to the corresponding chat rows
         UserAdapter adapter = new UserAdapter(0,list,getContext());
