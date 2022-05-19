@@ -10,6 +10,7 @@ import com.example.bluetooth_messaging_app.Fragments.DirectChatsFragment;
 import com.example.bluetooth_messaging_app.Fragments.GroupsFragment;
 
 public class FragmentsAdapter extends FragmentPagerAdapter {
+    //this class holds the two fragments of the main layout
     public FragmentsAdapter(@NonNull FragmentManager fm) {
         super(fm);
     }
@@ -18,27 +19,27 @@ public class FragmentsAdapter extends FragmentPagerAdapter {
     @NonNull
     @Override
     public Fragment getItem(int position) {
-        switch(position){
-            case 0: return new DirectChatsFragment();
-            case 1: return new GroupsFragment();
-            default:return new DirectChatsFragment();
+        switch(position){       //Here the particular layout is selected between Direct chat and the Groups
+            case 0: return new DirectChatsFragment();       //Direct chats layout
+            case 1: return new GroupsFragment();            //Group chats layout
+            default:return new DirectChatsFragment();       //Direct chats layout
         }
     }
 
     @Override
     public int getCount() {
         return 2;
-    }
+    }   //Number of layouts
 
     @Nullable
     @Override
     public CharSequence getPageTitle(int position) {
-        String title = null;
+        String title = null;    //Title of the layout is selected
         if(position==0){
-            title = "DIRECT CHATS";
+            title = "DIRECT CHATS";     //Direct chats
         }
         if(position==1){
-            title = "GROUPS";
+            title = "GROUPS";           //Groups
         }
         return title;
     }
