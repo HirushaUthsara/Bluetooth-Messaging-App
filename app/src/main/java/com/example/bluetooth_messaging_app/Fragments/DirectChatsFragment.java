@@ -58,7 +58,7 @@ public class DirectChatsFragment extends Fragment {
         list.add(u8);
         list.add(u9);
         list.add(u10);
-        list.add(u11;
+        list.add(u11);
         list.add(u12);
         list.add(u13);
         list.add(u14);
