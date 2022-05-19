@@ -3,9 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Bluetooth-Messaging-App/Bluetooth-Messaging-App/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Bluetooth-Messaging-App/Bluetooth-Messaging-App/app/src/main/res/layout/activity_page2_3.xml" value="0.25" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Bluetooth-Messaging-App/Bluetooth-Messaging-App/app/src/main/res/menu/activity_page14.xml" value="0.25" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Bluetooth-Messaging-App/app/src/main/res/drawable/groupchaticon.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Bluetooth-Messaging-App/app/src/main/res/drawable/ic_baseline_send_24.xml" value="0.39921875" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Bluetooth-Messaging-App/app/src/main/res/drawable/normalchaticon.xml" value="0.26614583333333336" />
@@ -41,6 +38,7 @@
         <entry key="..\:/Users/dell/AndroidStudioProjects/Bluetooth-Messaging-App/app/src/main/res/layout/activity_page6.xml" value="0.24094202898550723" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Bluetooth-Messaging-App/app/src/main/res/layout/activity_page7.xml" value="0.24094202898550723" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Bluetooth-Messaging-App/app/src/main/res/layout/activity_page9.xml" value="0.24094202898550723" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/Bluetooth-Messaging-App/app/src/main/res/layout/fragment_direct_chats.xml" value="0.2368659420289855" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Bluetooth_Messaging_App/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
       </map>
     </option>
