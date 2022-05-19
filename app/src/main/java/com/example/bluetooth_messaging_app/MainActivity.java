@@ -59,23 +59,62 @@ public class MainActivity extends AppCompatActivity {
         db.storeContact(c11);
 
 
-        Message m1 = new Message(1000,"MyUserId","A","hi");
-        Message m2 = new Message(1001,"A","MyUserId","hello");
-        Message m3 = new Message(1015,"MyUserId","B","How are you");
-        Message m4 = new Message(1018,"B","MyUserId","I'm fine");
-        Message m5 = new Message(1035,"MyUserId","B","Where are u going today");
-        Message m6 = new Message(1041,"B","MyUserId","I'm going to my sister's school. Wy is that?");
-        Message m7 = new Message(1058,"MyUserId","A","Can i joion with you?");
-        Message m8 = new Message(1105,"A","MyUserId","If you can' come with me");
+//        Message m0 = new Message(1000,"MyUserId","A","hi");
+//        Message m1 = new Message(1001,"A","MyUserId","hello");
+//        Message m2 = new Message(1001,"A","MyUserId","How are uuu");
+//        Message m3 = new Message(1015,"MyUserId","A","How are you");
+//        Message m4 = new Message(1018,"A","MyUserId","I'm fine");
+//
+//        Message m5 = new Message(1035,"MyUserId","B","Where are u going today");
+//        Message m6 = new Message(1041,"B","MyUserId","I'm going to my sister's school. Wy is that?");
+//        Message m7 = new Message(1058,"MyUserId","B","Can i join with you?");
+//        Message m8 = new Message(1105,"B","MyUserId","Yes, you can");
+//
+//        Message m9 = new Message(1000,"MyUserId","C","Hello");
+//        Message m10 = new Message(1001,"C","MyUserId","Hi");
+//        Message m11 = new Message(1015,"MyUserId","C","Whats your name");
+//        Message m12 = new Message(1018,"C","MyUserId","where are u?");
+//
+//        Message m13 = new Message(1000,"MyUserId","D","Hey");
+//        Message m14 = new Message(1001,"D","MyUserId","Heyyyy");
+//        Message m15 = new Message(1015,"MyUserId","D","How are youuu");
+//        Message m16 = new Message(1018,"D","MyUserId","I'm good");
+//
+//        Message m17 = new Message(1000,"MyUserId","E","Hey man");
+//        Message m18 = new Message(1001,"E","MyUserId","how are u");
+//        Message m19 = new Message(1015,"MyUserId","E","How are you");
+//        Message m20 = new Message(1018,"E","MyUserId","I'm fine");
+//
+//        Message m21 = new Message(1000,"MyUserId","F","hi");
+//        Message m22 = new Message(1001,"F","MyUserId","hello");
+//        Message m23 = new Message(1015,"MyUserId","F","How are you");
+//        Message m24 = new Message(1018,"F","MyUserId","I'm fine");
 
-        db.storeMessage(m1);
-        db.storeMessage(m2);
-        db.storeMessage(m3);
-        db.storeMessage(m4);
-        db.storeMessage(m5);
-        db.storeMessage(m6);
-        db.storeMessage(m7);
-        db.storeMessage(m8);
+//        db.storeMessage(m0);
+//        db.storeMessage(m1);
+//        db.storeMessage(m2);
+//        db.storeMessage(m3);
+//        db.storeMessage(m4);
+//        db.storeMessage(m5);
+//        db.storeMessage(m6);
+//        db.storeMessage(m7);
+//        db.storeMessage(m8);
+//        db.storeMessage(m9);
+//        db.storeMessage(m10);
+//        db.storeMessage(m11);
+//        db.storeMessage(m12);
+//        db.storeMessage(m13);
+//        db.storeMessage(m14);
+//        db.storeMessage(m15);
+//        db.storeMessage(m16);
+//        db.storeMessage(m17);
+//        db.storeMessage(m18);
+//        db.storeMessage(m19);
+//        db.storeMessage(m20);
+//        db.storeMessage(m21);
+//        db.storeMessage(m22);
+//        db.storeMessage(m23);
+//        db.storeMessage(m24);
 
 
         //This is the floating button at the bottom of the main layout
