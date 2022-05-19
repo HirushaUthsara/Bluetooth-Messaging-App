@@ -36,6 +36,7 @@ public class page6 extends AppCompatActivity {
         DBHelper db = new DBHelper(context);
         MyUserID = db.getUserID();
 
+
         binding = ActivityPage6Binding.inflate(getLayoutInflater());
 
         String userID = getIntent().getStringExtra("userID");
@@ -73,24 +74,33 @@ public class page6 extends AppCompatActivity {
         });
 
         //I should take messages of the particular chat by the database using a function
-        //messageModel=db.loadMessages(userID);
-        Message m1 = new Message(1000,"B",MyUserID,"hi");
-        Message m2 = new Message(1001,MyUserID,"B","hello");
-        Message m3 = new Message(1015,"B",MyUserID,"How are you");
-        Message m4 = new Message(1018,MyUserID,"B","I'm fine");
-        Message m5 = new Message(1035,"B",MyUserID,"Where are u going today");
-        Message m6 = new Message(1041,MyUserID,"B","I'm going to my sister's school. Wy is that?");
-        Message m7 = new Message(1058,"B",MyUserID,"Can i joion with you?");
-        Message m8 = new Message(1105,"B",MyUserID,"If you can' come with me");
 
-        messageModel.add(m1);
-        messageModel.add(m2);
-        messageModel.add(m3);
-        messageModel.add(m4);
-        messageModel.add(m5);
-        messageModel.add(m6);
-        messageModel.add(m7);
-        messageModel.add(m8);
+          messageModel=db.loadMessages(userID);
+//        System.out.println("_________________________________________________________________________________________");
+//        for (int i = 0; i < messageModel.size(); i++) {
+//            System.out.println(messageModel.get(i));
+//        }
+//        System.out.println("_________________________________________________________________________________________");
+//        Message m1 = new Message(1000,"B",MyUserID,"hi");
+//        Message m2 = new Message(1001,MyUserID,"B","hello");
+//        Message m3 = new Message(1015,"B",MyUserID,"How are you");
+//        Message m4 = new Message(1018,MyUserID,"B","I'm fine");
+//        Message m5 = new Message(1035,"B",MyUserID,"Where are u going today");
+//        Message m6 = new Message(1041,MyUserID,"B","I'm going to my sister's school. Wy is that?");
+//        Message m7 = new Message(1058,"B",MyUserID,"Can i joion with you?");
+//        Message m8 = new Message(1105,"B",MyUserID,"If you can' come with me");
+//
+//        messageModel.add(m1);
+//        messageModel.add(m2);
+//        messageModel.add(m3);
+//        messageModel.add(m4);
+//        messageModel.add(m5);
+//        messageModel.add(m6);
+//        messageModel.add(m7);
+//        messageModel.add(m8);
+
+
+
 
         final ChatAdapter chatAdapter = new ChatAdapter(messageModel,this,MyUserID);
         binding.directchatmessages.setAdapter(chatAdapter);

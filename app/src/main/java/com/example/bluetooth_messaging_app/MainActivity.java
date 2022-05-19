@@ -20,6 +20,8 @@ import com.example.bluetooth_messaging_app.Models.main_chating;
 import com.example.bluetooth_messaging_app.databinding.ActivityMainBinding;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
     FloatingActionButton floatingbutton;
@@ -32,7 +34,32 @@ public class MainActivity extends AppCompatActivity {
         DBHelper db = new DBHelper(this);
         db.initializeUser("Hirusha Uthsara",2);
 
-        //System.out.println("Mac Address --------------------------------------------------->>>>>>>>>>>>>>>"+db.getUserID());
+        Contact c1 = new Contact("A","Chiran",3);
+        Contact c2 = new Contact("B","Ruchira",1);
+        Contact c3 = new Contact("C","Hirusha",5);
+
+        db.storeContact(c1);
+        db.storeContact(c2);
+        db.storeContact(c3);
+
+        Message m1 = new Message(1000,"MyUserId","A","hi");
+        Message m2 = new Message(1001,"A","MyUserId","hello");
+        Message m3 = new Message(1015,"MyUserId","B","How are you");
+        Message m4 = new Message(1018,"B","MyUserId","I'm fine");
+        Message m5 = new Message(1035,"MyUserId","B","Where are u going today");
+        Message m6 = new Message(1041,"B","MyUserId","I'm going to my sister's school. Wy is that?");
+        Message m7 = new Message(1058,"MyUserId","A","Can i joion with you?");
+        Message m8 = new Message(1105,"A","MyUserId","If you can' come with me");
+
+        db.storeMessage(m1);
+        db.storeMessage(m2);
+        db.storeMessage(m3);
+        db.storeMessage(m4);
+        db.storeMessage(m5);
+        db.storeMessage(m6);
+        db.storeMessage(m7);
+        db.storeMessage(m8);
+
 
         //This is the floating button at the bottom of the main layout
         floatingbutton = findViewById(R.id.floatingbutton);
@@ -83,4 +110,10 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
+
+
+
+
 }
