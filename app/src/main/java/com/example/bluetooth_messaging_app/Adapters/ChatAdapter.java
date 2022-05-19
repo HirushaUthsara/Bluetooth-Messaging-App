@@ -48,7 +48,7 @@ public class ChatAdapter extends RecyclerView.Adapter{
 
     @Override
     public int getItemViewType(int position){
-        if(messageModel.get(position).getSenderId()==MyUserID){      //Our ID
+        if(messageModel.get(position).getSenderId().equals(MyUserID)){      //Our ID
             return SENDER_VIEW_TYPE;
         }else{
             return RECEIVER_VIEW_TYPE;
@@ -62,8 +62,10 @@ public class ChatAdapter extends RecyclerView.Adapter{
 
         if(holder.getClass()==SenderViewHolder.class){
             ((SenderViewHolder)holder).senderMsg.setText(messagemodel1.getContent());
+            ((SenderViewHolder)holder).senderTime.setText(String.valueOf(messagemodel1.getTime()));
         }else{
             ((ReceiverViewHolder)holder).receiverMsg.setText(messagemodel1.getContent());
+            ((ReceiverViewHolder)holder).receiverTime.setText(String.valueOf(messagemodel1.getTime()));
         }
     }
 

@@ -18,6 +18,7 @@ import com.example.bluetooth_messaging_app.Adapters.ChatAdapter;
 import com.example.bluetooth_messaging_app.databinding.ActivityPage6Binding;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class page6 extends AppCompatActivity {
 //new
@@ -25,6 +26,7 @@ public class page6 extends AppCompatActivity {
     Context context = this;
     String MyUserID; //This should be taken
     ImageView profilepicture;
+    ArrayList<Message> messageModel = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,16 +72,25 @@ public class page6 extends AppCompatActivity {
             }
         });
 
-        final ArrayList<Message> messageModel = new ArrayList<>();
-
         //I should take messages of the particular chat by the database using a function
+        //messageModel=db.loadMessages(userID);
+        Message m1 = new Message(1000,"B",MyUserID,"hi");
+        Message m2 = new Message(1001,MyUserID,"B","hello");
+        Message m3 = new Message(1015,"B",MyUserID,"How are you");
+        Message m4 = new Message(1018,MyUserID,"B","I'm fine");
+        Message m5 = new Message(1035,"B",MyUserID,"Where are u going today");
+        Message m6 = new Message(1041,MyUserID,"B","I'm going to my sister's school. Wy is that?");
+        Message m7 = new Message(1058,"B",MyUserID,"Can i joion with you?");
+        Message m8 = new Message(1105,"B",MyUserID,"If you can' come with me");
 
-        Message m1 = new Message(1,1200,"B","C","hi");
-        Message m2 = new Message(3,1300,"A","A","h");
-        Message m3 = new Message(2,1200,"B","A","hi");
         messageModel.add(m1);
         messageModel.add(m2);
         messageModel.add(m3);
+        messageModel.add(m4);
+        messageModel.add(m5);
+        messageModel.add(m6);
+        messageModel.add(m7);
+        messageModel.add(m8);
 
         final ChatAdapter chatAdapter = new ChatAdapter(messageModel,this,MyUserID);
         binding.directchatmessages.setAdapter(chatAdapter);
@@ -91,8 +102,12 @@ public class page6 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String msg = binding.typingtext.getText().toString();
-                final Message m = new Message(1,1,MyUserID,userID,msg);
+                int hour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
+                int min = Calendar.getInstance().get(Calendar.MINUTE);
+                long current_time = (hour*100)+min;
+                final Message m = new Message(current_time,MyUserID,userID,msg);
                 messageModel.add(m);
+                db.storeMessage(m);
                 binding.typingtext.setText("");
             }
         });

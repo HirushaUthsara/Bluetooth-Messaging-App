@@ -1,5 +1,7 @@
 package com.example.bluetooth_messaging_app;
 
+import androidx.annotation.Nullable;
+
 public class Message {
 
     // model class for the messages
@@ -14,8 +16,15 @@ public class Message {
     }
 
     // parametric constructor
-    public Message(int id,long time,String senderId,String receiverId, String content) {
+    public Message(int id, long time, String senderId, String receiverId, String content) {
         this.id = id;
+        this.time = time;
+        this.senderId = senderId;
+        this.receiverId = receiverId;
+        this.content = content;
+    }
+
+    public Message(long time, String senderId, String receiverId, String content) {
         this.time = time;
         this.senderId = senderId;
         this.receiverId = receiverId;
