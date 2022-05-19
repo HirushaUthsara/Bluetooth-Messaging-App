@@ -32,6 +32,8 @@ public class GroupsFragment extends Fragment {
         // Inflate the layout for this fragment
         binding= FragmentGroupsBinding.inflate(inflater, container, false);
 
+        //I should take the arraylist from the database using a methaod and assign it to the list
+        //Instead of that i created some sample data here
         Users u1 = new Users("A1",1,"Colombo","Hi");
         Users u2 = new Users("A1",2,"Kalutara","Hello");
         Users u3 = new Users("A1",3,"Jaffna","wrvw");
@@ -62,7 +64,7 @@ public class GroupsFragment extends Fragment {
         list.add(u14);
         list.add(u15);
 
-
+        //Sending data to the corresponding chat rows
         UserAdapter adapter = new UserAdapter(1,list,getContext());
         binding.GroupchatRecyclerView.setAdapter(adapter);
 
