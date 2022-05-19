@@ -28,7 +28,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         // tables of database constructed here
-        // useId and contactID will be basically their Mac Address
+        // userId and contactID will be basically their Mac Address
         db.execSQL("create Table UserDetails (UserID TEXT primary key, username TEXT,user_profile_pic INTEGER)");
         db.execSQL("create Table DirectContacts (ContactID TEXT primary key, username TEXT,contact_profile_pic INTEGER)");
         db.execSQL("create Table Messages (MESSAGEID INTEGER primary key AUTOINCREMENT, TIME INTEGER,SENDERID TEXT, RECEIVERID TEXT, CONTENT TEXT)");
@@ -214,12 +214,16 @@ public class DBHelper extends SQLiteOpenHelper {
 
         if (cursor.moveToFirst()){
             do {
-                Message msg = new Message();
-                msg.setId(cursor.getInt(0));
-                msg.setTime(cursor.getLong(1));
-                msg.setSenderId(cursor.getString(2));
-                msg.setReceiverId(cursor.getString(3));
-                msg.setContent(cursor.getString(4));
+                try {
+                    Message msg = new Message();
+                    msg.setId(cursor.getInt(0));
+                    msg.setTime(cursor.getLong(1));
+                    msg.setSenderId(cursor.getString(2));
+                    msg.setReceiverId(cursor.getString(3));
+                    msg.setContent(cursor.getString(4));
+                } catch (Exception ex){
+                    //
+                }
 
             }
             while (cursor.moveToNext());

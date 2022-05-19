@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -65,6 +66,7 @@ public class page4 extends AppCompatActivity {
                 //You can use the 'currentpic' variable to update the profile picture
                 userid = db.getUserID();
                 db.setUserProfile(userid,currentpic);
+                System.out.println("Mac Address --------------------------------------------------->>>>>>>>>>>>>>>"+userid);
                 Intent i = new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(i);
             }

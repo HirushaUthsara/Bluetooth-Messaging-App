@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.renderscript.ScriptGroup;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         DBHelper db = new DBHelper(this);
         db.initializeUser("Hirusha Uthsara",2);
+
+        System.out.println("Mac Address --------------------------------------------------->>>>>>>>>>>>>>>"+db.getUserID());
 
 
         floatingbutton = findViewById(R.id.floatingbutton);
