@@ -26,7 +26,7 @@
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:background="@color/sender"
+            android:background="#BE9768"
             android:layout_gravity="center"
             android:textSize="30sp">
             </TextView>

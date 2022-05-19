@@ -37,10 +37,27 @@ public class MainActivity extends AppCompatActivity {
         Contact c1 = new Contact("A","Chiran",3);
         Contact c2 = new Contact("B","Ruchira",1);
         Contact c3 = new Contact("C","Hirusha",5);
+        Contact c4 = new Contact("D","Viduri",2);
+        Contact c5 = new Contact("E","Kalana",5);
+        Contact c6 = new Contact("F","Nimesh",6);
+        Contact c7 = new Contact("G","Madhuka",1);
+        Contact c8 = new Contact("H","Sanduni",2);
+        Contact c9 = new Contact("I","Amila",3);
+        Contact c10 = new Contact("J","Piyumi",4);
+        Contact c11 = new Contact("K","Sayuru",5);
 
         db.storeContact(c1);
         db.storeContact(c2);
         db.storeContact(c3);
+        db.storeContact(c4);
+        db.storeContact(c5);
+        db.storeContact(c6);
+        db.storeContact(c7);
+        db.storeContact(c8);
+        db.storeContact(c9);
+        db.storeContact(c10);
+        db.storeContact(c11);
+
 
         Message m1 = new Message(1000,"MyUserId","A","hi");
         Message m2 = new Message(1001,"A","MyUserId","hello");
