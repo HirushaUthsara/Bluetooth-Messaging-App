@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
 //        Message m22 = new Message(1001,"F","MyUserId","hello");
 //        Message m23 = new Message(1015,"MyUserId","F","How are you");
 //        Message m24 = new Message(1018,"F","MyUserId","I'm fine");
-
+//
 //        db.storeMessage(m0);
 //        db.storeMessage(m1);
 //        db.storeMessage(m2);

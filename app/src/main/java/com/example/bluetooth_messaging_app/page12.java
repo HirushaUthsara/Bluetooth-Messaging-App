@@ -2,11 +2,13 @@ package com.example.bluetooth_messaging_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -17,6 +19,7 @@ public class page12 extends AppCompatActivity {
     AutoCompleteTextView autoCompleteText;
     ArrayAdapter<String> adapteritems;
     ImageView profilepic;
+    Button createbutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +29,14 @@ public class page12 extends AppCompatActivity {
         autoCompleteText = findViewById(R.id.auto_completetext);
         profilepic = findViewById(R.id.profile_image);
 
+        createbutton = findViewById(R.id.createbutton);
+        createbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(i);
+            }
+        });
 
         adapteritems = new ArrayAdapter<String>(this,R.layout.list_item,items);
         autoCompleteText.setAdapter(adapteritems);
