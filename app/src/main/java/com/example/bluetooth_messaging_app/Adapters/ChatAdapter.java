@@ -17,18 +17,17 @@ import com.example.bluetooth_messaging_app.R;
 import java.util.ArrayList;
 
 public class ChatAdapter extends RecyclerView.Adapter{
-
-
+//This class holds the sending and receiving msg uis of the interface
 
     ArrayList<Message> messageModel;
     Context context;
     String MyUserID;
 
 
-    int SENDER_VIEW_TYPE = 1;
-    int RECEIVER_VIEW_TYPE = 2;
+    int SENDER_VIEW_TYPE = 1;   //These variables are used to find whether this is a sending msg or a receivig msg
+    int RECEIVER_VIEW_TYPE = 2; //These variables are used to find whether this is a sending msg or a receivig msg
 
-    public ChatAdapter(ArrayList<Message> messageModel,Context context,String MyUserID){
+    public ChatAdapter(ArrayList<Message> messageModel,Context context,String MyUserID){    //Constructor for the chat adapter
         this.messageModel = messageModel;
         this.context = context;
         this.MyUserID = MyUserID;
@@ -37,10 +36,10 @@ public class ChatAdapter extends RecyclerView.Adapter{
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        if(viewType==SENDER_VIEW_TYPE){
+        if(viewType==SENDER_VIEW_TYPE){ //If this is a sending msg assign a sender view holder
             View view = LayoutInflater.from(context).inflate(R.layout.sendingmsg,parent,false);
             return new SenderViewHolder(view);
-        }else{
+        }else{  //If this is a receiving msg assign a receiver view holder
             View view = LayoutInflater.from(context).inflate(R.layout.receivingmsg,parent,false);
             return new ReceiverViewHolder(view);
         }
@@ -48,7 +47,7 @@ public class ChatAdapter extends RecyclerView.Adapter{
 
     @Override
     public int getItemViewType(int position){
-        if(messageModel.get(position).getSenderId().equals(MyUserID)){      //Our ID
+        if(messageModel.get(position).getSenderId().equals(MyUserID)){      //Finding whether msg is a sending one or a receiving one uing the sender's id
             return SENDER_VIEW_TYPE;
         }else{
             return RECEIVER_VIEW_TYPE;
@@ -59,11 +58,11 @@ public class ChatAdapter extends RecyclerView.Adapter{
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         Message messagemodel1 = messageModel.get(position);
-
-        if(holder.getClass()==SenderViewHolder.class){
+        //Showing the msg and the time of the msg
+        if(holder.getClass()==SenderViewHolder.class){  //Of the sender
             ((SenderViewHolder)holder).senderMsg.setText(messagemodel1.getContent());
             ((SenderViewHolder)holder).senderTime.setText(String.valueOf(messagemodel1.getTime()));
-        }else{
+        }else{      //Of the receiver
             ((ReceiverViewHolder)holder).receiverMsg.setText(messagemodel1.getContent());
             ((ReceiverViewHolder)holder).receiverTime.setText(String.valueOf(messagemodel1.getTime()));
         }
@@ -75,24 +74,24 @@ public class ChatAdapter extends RecyclerView.Adapter{
     }
 
     public class ReceiverViewHolder extends RecyclerView.ViewHolder {
-
+    //this class holds the receiving msg layout
         TextView receiverMsg, receiverTime;
 
         public ReceiverViewHolder(@NonNull View itemView) {
             super(itemView);
-            receiverMsg = itemView.findViewById(R.id.ReceiverText);
-            receiverTime = itemView.findViewById(R.id.ReceiverTime);
+            receiverMsg = itemView.findViewById(R.id.ReceiverText);     //Receiving msg
+            receiverTime = itemView.findViewById(R.id.ReceiverTime);    //receiving msg time
         }
     }
 
     public class SenderViewHolder extends RecyclerView.ViewHolder {
-
+    //This class holds the sending msg layout
         TextView senderMsg, senderTime;
 
         public SenderViewHolder(@NonNull View itemView) {
             super(itemView);
-            senderMsg = itemView.findViewById(R.id.SenderText);
-            senderTime = itemView.findViewById(R.id.SenderTime);
+            senderMsg = itemView.findViewById(R.id.SenderText);     //Sending msg
+            senderTime = itemView.findViewById(R.id.SenderTime);    //Sending msg time
         }
     }
 }
