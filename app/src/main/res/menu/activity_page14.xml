@@ -11,9 +11,6 @@
     <item android:id="@+id/create_groupchat"
         android:title="CREATE GROUP CHAT" />
 
-    <item android:id="@+id/list_devices"
-        android:title="LIST DEVICES" />
-
 
 
 </menu>

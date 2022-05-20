@@ -156,10 +156,6 @@ public class MainActivity extends AppCompatActivity {
                 Intent i3 = new Intent(getApplicationContext(),page12.class);
                 startActivity(i3);
                 break;
-            case R.id.list_devices:
-                Intent i4 = new Intent(getApplicationContext(),page2_3.class);
-                startActivity(i4);
-                break;
         }
 
         return super.onOptionsItemSelected(item);
